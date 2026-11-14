@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_standard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&amp;family=Manrope:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "on-tertiary-fixed-variant": "#574500", "secondary-fixed": "#ffdea0", "inverse-on-surface": "#f3f0e9", "secondary": "#745b22", "on-primary-fixed-variant": "#174f46", "on-secondary-container": "#795f26", "on-primary-fixed": "#00201b", "primary-fixed-dim": "#9bd1c5", "secondary-fixed-dim": "#e4c27f", "on-tertiary-container": "#4f3e00", "surface-dim": "#dcdad3", "primary": "#00362f", "tertiary-fixed": "#ffe088", "surface-variant": "#e5e2db", "on-primary-container": "#88beb2", "surface-container-high": "#ebe8e1", "inverse-surface": "#31312c", "outline": "#707976", "on-error-container": "#93000a", "surface": "#fcf9f2", "surface-container-low": "#f6f3ec", "surface-container-lowest": "#ffffff", "surface-container-highest": "#e5e2db", "primary-fixed": "#b7eee1", "on-background": "#1c1c18", "on-surface": "#1c1c18", "primary-container": "#164e45", "background": "#fcf9f2", "tertiary-fixed-dim": "#e9c349", "tertiary-container": "#cca730", "on-secondary": "#ffffff", "secondary-container": "#ffdb96", "error": "#ba1a1a", "tertiary": "#735c00", "on-primary": "#ffffff", "surface-bright": "#fcf9f2", "error-container": "#ffdad6", "on-surface-variant": "#404946", "on-error": "#ffffff", "on-secondary-fixed": "#261900", "on-secondary-fixed-variant": "#5a430b", "on-tertiary-fixed": "#241a00", "on-tertiary": "#ffffff", "surface-tint": "#33675e", "surface-container": "#f0eee7", "outline-variant": "#bfc8c5", "inverse-primary": "#9bd1c5" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "space-lg": "1.5rem", "space-sm": "0.5rem", "margin-mobile": "1rem", "space-xl": "2.5rem", "space-2xl": "4rem", "space-md": "1rem", "gutter-mobile": "1rem", "margin": "3rem", "space-xs": "0.25rem", "gutter": "1.5rem" }, "fontFamily": { "label-button": ["Manrope"], "headline-lg-mobile": ["EB Garamond"], "body-md": ["Manrope"], "headline-sm": ["EB Garamond"], "price-headline": ["Manrope"], "label-nav": ["Manrope"], "headline-xl-mobile": ["EB Garamond"], "eyebrow-accent": ["Manrope"], "headline-md": ["EB Garamond"], "headline-lg": ["EB Garamond"], "body-lg": ["Manrope"], "headline-xl": ["EB Garamond"], "body-sm": ["Manrope"] }, "fontSize": { "label-button": ["13px", { "lineHeight": "18px", "letterSpacing": "0.02em", "fontWeight": "600" }], "headline-lg-mobile": ["28px", { "lineHeight": "36px", "letterSpacing": "-0.005em", "fontWeight": "500" }], "body-md": ["15px", { "lineHeight": "24px", "fontWeight": "400" }], "headline-sm": ["22px", { "lineHeight": "30px", "fontWeight": "600" }], "price-headline": ["18px", { "lineHeight": "24px", "letterSpacing": "-0.02em", "fontWeight": "700" }], "label-nav": ["14px", { "lineHeight": "20px", "fontWeight": "600" }], "headline-xl-mobile": ["36px", { "lineHeight": "44px", "letterSpacing": "-0.01em", "fontWeight": "500" }], "eyebrow-accent": ["11px", { "lineHeight": "16px", "letterSpacing": "0.14em", "fontWeight": "700" }], "headline-md": ["28px", { "lineHeight": "36px", "fontWeight": "600" }], "headline-lg": ["40px", { "lineHeight": "48px", "letterSpacing": "-0.01em", "fontWeight": "500" }], "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }], "headline-xl": ["56px", { "lineHeight": "64px", "letterSpacing": "-0.01em", "fontWeight": "500" }], "body-sm": ["13px", { "lineHeight": "20px", "fontWeight": "400" }] } } } };</script></head><body class="bg-background font-body-md text-on-surface antialiased"><header class="fixed top-0 left-0 right-0 z-50 bg-surface/95 backdrop-blur-md shadow-[0_4px_16px_-2px_rgba(22,78,69,0.06)]"><div class="bg-primary-container text-on-primary py-1 px-margin flex items-center justify-between font-label-button text-label-button"><div class="flex items-center gap-space-xs"><span class="material-symbols-outlined text-sm text-secondary-fixed">sell</span><span>Use Code <span class="text-secondary-fixed font-bold tracking-wider">GIRIUK2026</span> and Get 10% Off</span></div><div class="hidden md:flex items-center gap-space-xs text-on-primary-container"><span class="material-symbols-outlined text-sm text-secondary-fixed">local_shipping</span><span class="text-on-primary">Free UK Delivery on Orders Above £50</span></div><div class="flex items-center gap-space-md text-on-primary-container text-body-sm font-body-sm"><a class="hover:text-on-primary transition-colors" data-path="giri-uk-order-confirmation-thank-you" href="#">Track Order</a><span class="opacity-40">|</span><div class="flex items-center gap-space-xs"><span class="material-symbols-outlined text-sm">currency_pound</span><span>GBP (£)</span></div></div></div><div class="h-20 max-w-[1320px] mx-auto px-gutter flex items-center justify-between gap-space-lg"><div class="flex items-center gap-space-md shrink-0"><a class="flex flex-col text-inherit no-underline" data-path="festival-special" href="#"><div class="flex items-center gap-space-xs"><span class="font-headline-md text-headline-md tracking-tight text-primary font-bold leading-none">GIRI</span><span class="font-eyebrow-accent text-eyebrow-accent uppercase bg-secondary text-on-secondary px-1.5 py-0.5 rounded">UK</span></div><span class="font-eyebrow-accent text-[9px] tracking-widest uppercase text-secondary font-semibold mt-0.5">In UK &amp; EU by SHIVAYAA</span></a></div><div class="flex-1 max-w-2xl"><div class="relative flex items-center w-full"><span class="material-symbols-outlined absolute left-4 text-outline">search</span><input class="w-full pl-11 pr-4 py-2.5 rounded-full bg-surface-container-low text-on-surface placeholder:text-outline-variant font-body-sm text-body-sm focus:outline-none focus:bg-surface-container-lowest focus:ring-1 focus:ring-secondary transition-all shadow-[inset_0_1px_3px_rgba(0,0,0,0.04)]" placeholder="Search for Puja Items, Books, Idols, Jewellery..." type="text"/></div></div><div class="flex items-center gap-space-lg shrink-0"><div class="relative group"><a class="flex items-center gap-space-xs text-on-surface-variant hover:text-primary transition-colors font-label-nav text-label-nav" data-path="giri-uk-customer-account-dashboard" href="#"><img alt="Ananya S." class="w-7 h-7 rounded-full object-cover ring-1 ring-secondary-container" src="https://lh3.googleusercontent.com/aida/AEtjO1WtQs4tb94R3VtDclknX-e1_zNOt0cljTd_m9BOhgepQ4yXjLuCraAYnBFNNwdDA7LawqOg_nVorbI_VDA_TfET6KctKpscmsRs9L82ua3mP38e9fE25VqxOXi_TlTXpdiP3vDtYFcqI_iq_S5vBGo7UsYTzEv0XstgP2GPCfNrVh9Z1NR2PZcAFlA21UjwybKFkh4ru4dGEEBmlgCxQ7gNeXpo77nl5M8Lh1xREGNRngsl-VXxKKRycCS1"/><span class="hidden lg:inline">My Account (Ananya S.)</span><span class="material-symbols-outlined text-sm text-outline">expand_more</span></a><div class="absolute right-0 top-full mt-2 w-56 bg-surface-container-lowest rounded-xl shadow-[0_12px_28px_-4px_rgba(22,78,69,0.12)] p-2 hidden group-hover:flex flex-col z-50 border-t-2 border-secondary"><a class="px-3 py-2 rounded-lg text-body-sm text-on-surface hover:bg-surface-container-low hover:text-primary transition-colors flex items-center justify-between" data-path="giri-uk-customer-account-dashboard" href="#"><span>Account Dashboard</span><span class="material-symbols-outlined text-sm text-outline">dashboard</span></a><a class="px-3 py-2 rounded-lg text-body-sm text-on-surface hover:bg-surface-container-low hover:text-primary transition-colors flex items-center justify-between" data-path="giri-uk-customer-order-history" href="#"><span>Order History</span><span class="material-symbols-outlined text-sm text-outline">receipt_long</span></a><div class="h-px bg-surface-container-high my-1"></div><a class="px-3 py-2 rounded-lg text-body-sm text-on-surface hover:bg-surface-container-low hover:text-primary transition-colors flex items-center justify-between" data-path="giri-uk-sign-in-customer-login" href="#"><span>Sign Out</span><span class="material-symbols-outlined text-sm text-outline">logout</span></a></div></div><a class="flex items-center gap-space-xs text-on-surface-variant hover:text-primary transition-colors font-label-nav text-label-nav" data-path="wishlist" href="#"><span class="material-symbols-outlined text-xl">favorite</span><span class="hidden lg:inline">Wishlist</span></a><a class="flex items-center gap-space-sm text-on-surface-variant hover:text-primary transition-colors font-label-nav text-label-nav" data-path="cart" href="#"><div class="relative flex items-center justify-center"><span class="material-symbols-outlined text-2xl text-primary">shopping_bag</span><span class="absolute -top-1.5 -right-2 bg-secondary-container text-on-secondary-container font-price-headline text-[11px] font-bold w-5 h-5 rounded-full flex items-center justify-center">2</span></div><span class="hidden lg:inline font-price-headline text-price-headline text-primary">£48.50</span></a></div></div><div class="bg-surface-container-low shadow-[0_1px_4px_rgba(22,78,69,0.04)]"><div class="max-w-[1320px] mx-auto px-gutter"><nav class="flex items-center justify-between overflow-x-auto py-2.5 gap-space-md" data-active-classes="text-primary font-bold border-b-2 border-secondary"><a class="font-label-nav text-label-nav text-on-surface-variant hover:text-primary whitespace-nowrap transition-colors" data-path="festival-special" href="#">Festival Special</a><a class="font-label-nav text-label-nav text-on-surface-variant hover:text-primary whitespace-nowrap transition-colors" data-path="new-arrivals" href="#">New Arrivals</a><a class="font-label-nav text-label-nav text-on-surface-variant hover:text-primary whitespace-nowrap transition-colors" data-path="on-demand" href="#">On Demand</a><a class="font-label-nav text-label-nav text-on-surface-variant hover:text-primary whitespace-nowrap transition-colors" data-path="books" href="#">Books</a><a class="font-label-nav text-label-nav text-on-surface-variant hover:text-primary whitespace-nowrap transition-colors" data-path="puja" href="#">Puja</a><a class="font-label-nav text-label-nav text-on-surface-variant hover:text-primary whitespace-nowrap transition-colors" data-path="idols-handicrafts" href="#">Idols &amp; Handicrafts</a><a class="font-label-nav text-label-nav text-on-surface-variant hover:text-primary whitespace-nowrap transition-colors" data-path="dancewear-jewellery" href="#">Dancewear &amp; Jewellery</a><a class="font-label-nav text-label-nav text-on-surface-variant hover:text-primary whitespace-nowrap transition-colors" data-path="home-decor-gifts" href="#">Home Decor &amp; Gifts</a><a class="font-label-nav text-label-nav text-on-surface-variant hover:text-primary whitespace-nowrap transition-colors" data-path="textiles" href="#">Textiles</a></nav></div></div></header><main class="w-full pt-36 bg-surface min-h-[calc(100vh-144px)]"><div class="flex flex-col w-full">
+<!-- Top Breadcrumb & Sacred Indicator -->
+<section class="w-full bg-surface-container-low py-3">
+<div class="max-w-[1320px] mx-auto px-gutter flex items-center justify-between">
+<nav class="flex items-center gap-space-xs font-body-sm text-body-sm text-on-surface-variant">
+<a class="hover:text-primary transition-colors" data-path="festival-special" href="#">Home</a>
+<span class="text-outline-variant">/</span>
+<span class="hover:text-primary transition-colors">About GIRI UK</span>
+<span class="text-outline-variant">/</span>
+<span class="text-primary font-semibold">Our Heritage &amp; Story</span>
+</nav>
+<div class="hidden sm:flex items-center gap-2 text-secondary font-label-button text-[12px] uppercase tracking-wider">
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">workspace_premium</span>
+<span>Seven Decades of Dharma • 1953 – 2026</span>
+</div>
+</div>
+</section>
+<!-- Hero Section -->
+<section class="relative w-full bg-surface pt-space-xl pb-space-2xl overflow-hidden">
+<div class="max-w-[1320px] mx-auto px-gutter">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-xl items-center">
+<!-- Text Column -->
+<div class="lg:col-span-7 flex flex-col gap-space-md z-10">
+<div class="inline-flex items-center gap-2 self-start bg-secondary-container/60 text-on-secondary-container px-3.5 py-1.5 rounded-full">
+<span class="material-symbols-outlined text-sm text-secondary" style="font-variation-settings: 'FILL' 1;">temple_hindu</span>
+<span class="font-eyebrow-accent text-eyebrow-accent uppercase tracking-widest text-secondary">ESTABLISHED 1953 • CHENNAI TO THE BRITISH ISLES</span>
+</div>
+<h1 class="font-headline-xl text-headline-xl text-primary tracking-tight leading-tight">
+            Nurturing Sanatana Dharma, Sacred Arts &amp; Vedic Culture for the UK &amp; Europe
+          </h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant leading-relaxed max-w-2xl">
+            For over seven decades, GIRI has preserved authentic Indian devotional literature, handcrafted temple bronze &amp; brass vigrahams, and sanctified puja essentials. Today, in sacred synergy with <span class="font-semibold text-primary">SHIVAYAA</span>, we bring centuries of ritual reverence directly to homes, mandirs, and cultural centers across the United Kingdom.
+          </p>
+<div class="flex flex-wrap items-center gap-space-md pt-2">
+<a class="inline-flex items-center gap-2 bg-primary text-on-primary px-6 py-3 rounded-full font-label-button text-label-button shadow-md hover:bg-primary-container transition-all" href="#heritage-timeline">
+<span>Explore Our 70-Year Journey</span>
+<span class="material-symbols-outlined text-sm">south</span>
+</a>
+<a class="inline-flex items-center gap-2 text-secondary font-label-button text-label-button hover:text-primary transition-colors py-3" href="#shivayaa-alliance">
+<span>The SHIVAYAA UK Alliance</span>
+<span class="material-symbols-outlined text-sm">arrow_forward</span>
+</a>
+</div>
+<!-- Micro Metric Strip -->
+<div class="grid grid-cols-3 gap-space-md pt-space-lg">
+<div class="p-3 bg-surface-container-low rounded-xl">
+<span class="font-headline-md text-headline-md text-primary font-bold block">1953</span>
+<span class="font-body-sm text-[12px] text-on-surface-variant">Founded in Mylapore, Chennai</span>
+</div>
+<div class="p-3 bg-surface-container-low rounded-xl">
+<span class="font-headline-md text-headline-md text-secondary font-bold block">50,000+</span>
+<span class="font-body-sm text-[12px] text-on-surface-variant">Authentic Vedic Titles &amp; Murtis</span>
+</div>
+<div class="p-3 bg-surface-container-low rounded-xl">
+<span class="font-headline-md text-headline-md text-primary font-bold block">24/48h</span>
+<span class="font-body-sm text-[12px] text-on-surface-variant">Tracked UK Island Fulfillment</span>
+</div>
+</div>
+</div>
+<!-- Visual Hero Mosaic -->
+<div class="lg:col-span-5 relative">
+<div class="relative w-full aspect-[4/5] rounded-3xl overflow-hidden shadow-xl bg-surface-container-high">
+<img class="w-full h-full object-cover" data-alt="A reverent warm atmospheric image of a hand-cast antique brass Nataraja murti surrounded by glowing terracotta oil lamps, fragrant white jasmine malas, and sacred Sanskrit palm leaf scriptures bathed in soft temple sunlight with rich forest green and golden amber accents." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB7SwVWUm6EsVMTHQdt7ipj06sx9QSUEuoxxw7Jqy9-kJPmQf0fuEThuESivpQnYcfGQEczmHILfeW0s4mUaj34jl028f9Vi0MvsqHXLmYQsmnsPGEeiZGiEvDsvMBWtUWrwpmXHZQrOWGGTYqwOL-HU3HxyVkhFL6xc43kynlEuzSrOx4rNiwcMHJqWox9Vo9UzMPKkOCu2ISccbKiATdCbytgfktSJuz560FpKkzg"/>
+<div class="absolute inset-0 bg-gradient-to-t from-primary/80 via-primary/20 to-transparent"></div>
+<!-- Floating Badge Card -->
+<div class="absolute bottom-6 left-6 right-6 p-4 rounded-2xl bg-surface/90 backdrop-blur-md shadow-lg">
+<div class="flex items-center gap-3">
+<div class="w-12 h-12 rounded-full bg-secondary/20 flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-secondary text-2xl" style="font-variation-settings: 'FILL' 1;">auto_stories</span>
+</div>
+<div>
+<h4 class="font-headline-sm text-headline-sm text-primary leading-tight">Mylapore to London</h4>
+<p class="font-body-sm text-[12px] text-on-surface-variant leading-snug">Empowering ritual continuity across generations without compromise.</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Decorative Floating Stamp -->
+<div class="hidden sm:flex absolute -top-4 -right-4 w-28 h-28 rounded-full bg-primary-container text-on-primary flex-col items-center justify-center text-center p-2 shadow-xl ring-4 ring-surface">
+<span class="material-symbols-outlined text-secondary-fixed text-lg">verified_user</span>
+<span class="font-eyebrow-accent text-[9px] uppercase tracking-wider text-secondary-fixed font-bold">Authentic</span>
+<span class="font-body-sm text-[10px] leading-tight text-surface-variant">Temple Lineage</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Sacred Purpose Narrative -->
+<section class="w-full bg-surface-container-low py-space-2xl">
+<div class="max-w-[1320px] mx-auto px-gutter">
+<div class="max-w-3xl mx-auto text-center flex flex-col items-center gap-space-sm mb-space-xl">
+<span class="font-eyebrow-accent text-eyebrow-accent uppercase tracking-widest text-secondary">TRADITION PRESERVED</span>
+<h2 class="font-headline-lg text-headline-lg text-primary">The Living Breath of Sanatana Dharma</h2>
+<div class="w-16 h-0.5 bg-secondary-fixed-dim rounded-full"></div>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+          Sacred rituals are not mere physical routines; they are metaphysical bridges anchoring us to divine memory, ancestral grace, and inner equilibrium. Whether you are performing Sandhyavandanam in Surrey, hosting Navaratri Golu in Leicester, or lighting your Sandalwood Dhoop in Edinburgh, GIRI ensures your sacred instruments carry pristine sanctity.
+        </p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-space-lg">
+<div class="bg-surface-container-lowest p-space-lg rounded-2xl shadow-sm flex flex-col gap-3">
+<div class="w-12 h-12 rounded-xl bg-primary-container/10 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-2xl" style="font-variation-settings: 'FILL' 1;">menu_book</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-primary">Vedic &amp; Agamic Shastras</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+            From comprehensive Rig, Yajur, and Sama Veda recitations to bilingual stotra compilations, Gita bhashyas, and temple Kumbhabhishekam manuals, vetted meticulously by eminent Sanskrit vidwans.
+          </p>
+</div>
+<div class="bg-surface-container-lowest p-space-lg rounded-2xl shadow-sm flex flex-col gap-3">
+<div class="w-12 h-12 rounded-xl bg-primary-container/10 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-2xl" style="font-variation-settings: 'FILL' 1;">handyman</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-primary">Ashtadhatu &amp; Brass Vigrahams</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+            Every murti is fashioned strictly adhering to the Shilpa Shastras by master hereditary stapathis in Swamimalai and Nachiyar Koil, maintaining canonical proportions and spiritual serenity.
+          </p>
+</div>
+<div class="bg-surface-container-lowest p-space-lg rounded-2xl shadow-sm flex flex-col gap-3">
+<div class="w-12 h-12 rounded-xl bg-primary-container/10 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-2xl" style="font-variation-settings: 'FILL' 1;">spa</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-primary">Unadulterated Puja Samagri</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+            Pure Mysore sandalwood paste, naturally distilled rose water, organic cow ghee wicks, hand-rolled temple flora agarbattis, and sacred vibhuti prepared through ancient Vedic homam methods.
+          </p>
+</div>
+</div>
+</div>
+</section>
+<!-- Interactive 70-Year Heritage Timeline -->
+<section class="w-full bg-surface py-space-2xl" id="heritage-timeline">
+<div class="max-w-[1320px] mx-auto px-gutter">
+<div class="text-center max-w-2xl mx-auto mb-space-xl flex flex-col items-center gap-space-xs">
+<span class="font-eyebrow-accent text-eyebrow-accent uppercase tracking-widest text-secondary">SEVEN DECADES OF DEVOTION</span>
+<h2 class="font-headline-lg text-headline-lg text-primary">Our Sacred Journey Through Time</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">Tracing the footsteps of humble seva from temple streets to the European diaspora.</p>
+</div>
+<!-- Vertical Desktop / Tablet Timeline -->
+<div class="relative">
+<!-- Center Spine Line -->
+<div class="hidden md:block absolute left-1/2 top-4 bottom-4 w-0.5 bg-surface-variant -translate-x-1/2"></div>
+<div class="flex flex-col gap-space-xl">
+<!-- 1953 Milestone -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-space-lg items-center relative">
+<div class="md:text-right flex flex-col md:items-end gap-2 pr-0 md:pr-space-lg">
+<span class="font-headline-md text-headline-md text-secondary font-bold">1953</span>
+<h3 class="font-headline-sm text-headline-sm text-primary">The Sanctuary at Kapaleeshwarar</h3>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+                Founded opposite the sanctified gates of Sri Kapaleeshwarar Temple in Mylapore, Chennai. Began as a dedicated publisher of sloka booklets, authentic panchangams, and traditional Carnatic musical texts for temple pilgrims.
+              </p>
+<div class="inline-flex items-center gap-1.5 text-secondary font-label-button text-[12px] bg-secondary-fixed/30 px-3 py-1 rounded-full">
+<span class="material-symbols-outlined text-xs">location_on</span>
+<span>Mylapore, Tamil Nadu</span>
+</div>
+</div>
+<!-- Pin -->
+<div class="hidden md:flex absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-8 h-8 rounded-full bg-surface-container-lowest shadow-md items-center justify-center">
+<div class="w-3.5 h-3.5 rounded-full bg-primary"></div>
+</div>
+<div class="pl-0 md:pl-space-lg">
+<div class="w-full h-56 rounded-2xl overflow-hidden shadow-sm bg-surface-container">
+<img class="w-full h-full object-cover" data-alt="Vintage black and white photograph style depicting a traditional 1950s South Indian bookstore facade in Mylapore near a temple tower, with rows of sacred Sanskrit palmleaf and bound devotional sloka books and devout visitors." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA7zNnQI48DF8FUxYT0uzxxseKSf2nTJTlF85qM_U472tICQnbQoWTY_NQ1rvV7o1ylxmrvrBmnm5-qsE4sqveOn3ePV5mAvsGKwz4TyZw6OOYBEQzkbS1ooCFyeNygRZ-G2gNv6ru6TNJicJW_a05e92PzaSBi8iwiQtlWBrZpZROYhI5bJoi8CtEwwaNdNMpuCx3HnihgpkF0bDnCSTdl13IJ5wJcMrTkqHEjjGK0"/>
+</div>
+</div>
+</div>
+<!-- 1978 Milestone -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-space-lg items-center relative">
+<div class="order-2 md:order-1 pr-0 md:pr-space-lg">
+<div class="w-full h-56 rounded-2xl overflow-hidden shadow-sm bg-surface-container">
+<img class="w-full h-full object-cover" data-alt="Warm sepia and green toned shot of an old traditional Indian printing press running Sanskrit and Tamil devotional stotra literature with antique letterpress movable type, stacks of golden-edge Vedic scriptures." src="https://lh3.googleusercontent.com/aida-public/AB6AXuD1cwz_jEDAMi0DnsY_jtmOItyAEUoyryvxyZvOPA1g_ZyJ4Sc1SJ49GVAKXG9BHeG2NQ3AkDM_uZ_OOJ6vjJeghu3Y-gTka_XLNyThHwK0lSw8539IHVBqdbR58gE74VJ696ny-D0I5gXXuFG0fTxReav0DD_NmimwNiihAo3W0N7P5PQWDDthK2NdCfsvCJkbC5mXrr-X9NOll24A7Cy1lfWZ0n9UoKruImOm87El"/>
+</div>
+</div>
+<!-- Pin -->
+<div class="hidden md:flex absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-8 h-8 rounded-full bg-surface-container-lowest shadow-md items-center justify-center">
+<div class="w-3.5 h-3.5 rounded-full bg-secondary"></div>
+</div>
+<div class="order-1 md:order-2 pl-0 md:pl-space-lg flex flex-col items-start gap-2">
+<span class="font-headline-md text-headline-md text-secondary font-bold">1978</span>
+<h3 class="font-headline-sm text-headline-sm text-primary">Preserving the Agamic Press</h3>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+                Expanded publication operations across Southern India. Collaborated with revered mutts and Vedic pathashalas to transcribe rare hand-scribed cadjan manuscripts into standardized, high-clarity editions for household daily recitation.
+              </p>
+<div class="inline-flex items-center gap-1.5 text-primary font-label-button text-[12px] bg-primary-container/10 px-3 py-1 rounded-full">
+<span class="material-symbols-outlined text-xs">menu_book</span>
+<span>Authoritative Stotra Publications</span>
+</div>
+</div>
+</div>
+<!-- 2005 Milestone -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-space-lg items-center relative">
+<div class="md:text-right flex flex-col md:items-end gap-2 pr-0 md:pr-space-lg">
+<span class="font-headline-md text-headline-md text-secondary font-bold">2005</span>
+<h3 class="font-headline-sm text-headline-sm text-primary">Sustaining Temple Stapathis</h3>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+                Institutionalized direct fair-trade artisan cooperatives with lost-wax bronze casting lineages in Swamimalai, Kanchipuram silk weavers, and Tanjore gold leaf painters, insulating indigenous craft forms from commercial dilution.
+              </p>
+<div class="inline-flex items-center gap-1.5 text-secondary font-label-button text-[12px] bg-secondary-fixed/30 px-3 py-1 rounded-full">
+<span class="material-symbols-outlined text-xs">handyman</span>
+<span>Artisan Lineage Protection</span>
+</div>
+</div>
+<!-- Pin -->
+<div class="hidden md:flex absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-8 h-8 rounded-full bg-surface-container-lowest shadow-md items-center justify-center">
+<div class="w-3.5 h-3.5 rounded-full bg-primary"></div>
+</div>
+<div class="pl-0 md:pl-space-lg">
+<div class="w-full h-56 rounded-2xl overflow-hidden shadow-sm bg-surface-container">
+<img class="w-full h-full object-cover" data-alt="Intricate craftsmanship photography of an Indian master sculptor stapathi carving the divine features of a brass Panchaloha Ganesha idol in a traditional workshop with clay molds and bronze dust glistening in sunlight." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB59LMnYHIwxMUsAQikX0ROuu0QmhyLUQr0z8A58TAqcJV1VQ2ibrmwCRazWl2TQYhVLqtJTNr7tTCQkdm-aDzeNmrfsjQw3MX78N6NnDJrwGFypNL6GzBe-RQpU6g4hykQ_nskUm3fiHEfQFSOw5irLHhXotmtUtktP7OQAMgGVo3x-QJ64vjBFpDeOOjjPcrgW_oHiMTT9BqN7pILGwSLQVFjysEBeDTH21HZfsS7"/>
+</div>
+</div>
+</div>
+<!-- 2024–2026 Milestone -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-space-lg items-center relative">
+<div class="order-2 md:order-1 pr-0 md:pr-space-lg">
+<div class="w-full h-56 rounded-2xl overflow-hidden shadow-sm bg-surface-container">
+<img class="w-full h-full object-cover" data-alt="A modern well-lit London distribution sanctuary with orderly wooden shelves storing brass puja lamps, silk dhotis, and packaged festival kits, with UK flag and Giri UK insignia on royal mail parcels." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCtS3Uo1q3H_SK4lw53gjOlKEwvHj2eWk056IbGkquCXLRdW495HiwTJ5aa3GBcJ_v4W7ms0vMGLuqObm9-Fg2OD9rypIfrw-IaJ3NEUz7siUis2vo5ubBz-yR5R51jHSMhEBIvYUjz_aDt5uSb7ehAcg0-77e51l17AHe050TJBn7f20DMZUg7yJP_WqSuv2HLh0zIeK00fqzQ1LJE12FR5bGz0MktpyLdX-Inuogl"/>
+</div>
+</div>
+<!-- Pin -->
+<div class="hidden md:flex absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-8 h-8 rounded-full bg-surface-container-lowest shadow-md items-center justify-center">
+<div class="w-3.5 h-3.5 rounded-full bg-primary ring-4 ring-secondary-container"></div>
+</div>
+<div class="order-1 md:order-2 pl-0 md:pl-space-lg flex flex-col items-start gap-2">
+<span class="font-headline-md text-headline-md text-secondary font-bold">2024 – Present</span>
+<h3 class="font-headline-sm text-headline-sm text-primary">The British Isles &amp; European Bridge</h3>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+                In strategic partnership with SHIVAYAA, GIRI UK was established with a dedicated logistics hub in London/Wembley. Providing zero-customs, rapid local Royal Mail dispatch and genuine spiritual assurance to hundreds of diaspora communities.
+              </p>
+<div class="inline-flex items-center gap-1.5 text-primary font-label-button text-[12px] bg-primary-container/10 px-3 py-1 rounded-full">
+<span class="material-symbols-outlined text-xs">local_shipping</span>
+<span>Local UK Stock &amp; Next Day Delivery</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Core Pillars of Sacred Trust -->
+<section class="w-full bg-surface-container-low py-space-2xl">
+<div class="max-w-[1320px] mx-auto px-gutter">
+<div class="flex flex-col md:flex-row md:items-end justify-between mb-space-xl gap-space-md">
+<div>
+<span class="font-eyebrow-accent text-eyebrow-accent uppercase tracking-widest text-secondary">UNWAVERING INTEGRITY</span>
+<h2 class="font-headline-lg text-headline-lg text-primary">Four Pillars of Devotional Trust</h2>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-md">
+          How we preserve sanctity and ritual efficacy across four thousand miles between the Kaveri and the Thames.
+        </p>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-space-lg">
+<!-- Pillar 1 -->
+<div class="bg-surface-container-lowest p-space-lg rounded-2xl shadow-sm flex flex-col justify-between">
+<div class="flex flex-col gap-3">
+<span class="font-headline-md text-headline-md text-secondary font-bold">01</span>
+<h3 class="font-headline-sm text-headline-sm text-primary">Agamic Canon &amp; Lineage</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+              Every brass and bronze murti is cast in accordance with classical iconometry. Never mass-replicated or machine-stamped without reverent proportion.
+            </p>
+</div>
+<div class="pt-4 flex items-center gap-2 text-primary font-body-sm text-[12px]">
+<span class="material-symbols-outlined text-sm text-secondary">verified</span>
+<span>Canonical Shilpa Shastra</span>
+</div>
+</div>
+<!-- Pillar 2 -->
+<div class="bg-surface-container-lowest p-space-lg rounded-2xl shadow-sm flex flex-col justify-between">
+<div class="flex flex-col gap-3">
+<span class="font-headline-md text-headline-md text-secondary font-bold">02</span>
+<h3 class="font-headline-sm text-headline-sm text-primary">Consecrated Packaging</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+              Puja items and vigrahams are stored in pristine sanctified environments, gently swaddled in saffron fabric, and cushioned with biodegradable ahimsa packaging.
+            </p>
+</div>
+<div class="pt-4 flex items-center gap-2 text-primary font-body-sm text-[12px]">
+<span class="material-symbols-outlined text-sm text-secondary">clean_hands</span>
+<span>Ritually Pure Handling</span>
+</div>
+</div>
+<!-- Pillar 3 -->
+<div class="bg-surface-container-lowest p-space-lg rounded-2xl shadow-sm flex flex-col justify-between">
+<div class="flex flex-col gap-3">
+<span class="font-headline-md text-headline-md text-secondary font-bold">03</span>
+<h3 class="font-headline-sm text-headline-sm text-primary">UK-Calculated Almanac</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+              We commission custom UK-adjusted panchangams ensuring Greenwich Mean Time sunrise, tithi, nakshatra, and rahu kaalam alignments are mathematically exact.
+            </p>
+</div>
+<div class="pt-4 flex items-center gap-2 text-primary font-body-sm text-[12px]">
+<span class="material-symbols-outlined text-sm text-secondary">schedule</span>
+<span>GMT/BST Astro Calculations</span>
+</div>
+</div>
+<!-- Pillar 4 -->
+<div class="bg-surface-container-lowest p-space-lg rounded-2xl shadow-sm flex flex-col justify-between">
+<div class="flex flex-col gap-3">
+<span class="font-headline-md text-headline-md text-secondary font-bold">04</span>
+<h3 class="font-headline-sm text-headline-sm text-primary">Ethical Patronage</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+              Direct compensation eliminates layers of middlemen, directly providing generational sustainability for traditional rural artisans and Sanskrit institutions.
+            </p>
+</div>
+<div class="pt-4 flex items-center gap-2 text-primary font-body-sm text-[12px]">
+<span class="material-symbols-outlined text-sm text-secondary">handshake</span>
+<span>100% Direct Artisan Remittance</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- The SHIVAYAA Alliance Split Banner -->
+<section class="w-full bg-primary text-on-primary py-space-2xl" id="shivayaa-alliance">
+<div class="max-w-[1320px] mx-auto px-gutter">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-xl items-center">
+<!-- Visual Map / Hub Graphic -->
+<div class="lg:col-span-5 relative">
+<div class="bg-primary-container p-space-lg rounded-3xl shadow-xl flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<span class="font-eyebrow-accent text-eyebrow-accent text-secondary-fixed uppercase tracking-wider">UK &amp; EU FULFILLMENT SANCTUARY</span>
+<span class="px-2.5 py-1 rounded bg-secondary text-on-secondary font-label-button text-[11px] font-bold">WEMBLEY, LONDON</span>
+</div>
+<div class="relative w-full aspect-video rounded-2xl overflow-hidden bg-primary">
+<div class="w-full h-full bg-cover bg-center" data-location="Wembley, London, UK" style=""></div>
+<div class="absolute inset-0 bg-primary/40 flex items-center justify-center p-4 text-center">
+<div class="bg-surface/95 text-on-surface p-4 rounded-xl shadow-lg max-w-xs">
+<span class="material-symbols-outlined text-secondary text-2xl" style="font-variation-settings: 'FILL' 1;">warehouse</span>
+<p class="font-headline-sm text-[16px] text-primary font-bold mt-1">London Stock Sanctuary</p>
+<p class="font-body-sm text-[11px] text-on-surface-variant">Over 25,000 items on London shelves for instant UK mainland dispatch.</p>
+</div>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-3 text-center">
+<div class="p-3 rounded-xl bg-primary/60">
+<span class="material-symbols-outlined text-secondary-fixed text-lg">local_shipping</span>
+<p class="font-label-button text-label-button text-on-primary mt-1">Zero Import Duty</p>
+<p class="font-body-sm text-[11px] text-surface-container-highest">No surprise post office fees</p>
+</div>
+<div class="p-3 rounded-xl bg-primary/60">
+<span class="material-symbols-outlined text-secondary-fixed text-lg">speed</span>
+<p class="font-label-button text-label-button text-on-primary mt-1">Royal Mail 24/48</p>
+<p class="font-body-sm text-[11px] text-surface-container-highest">Next day delivery options</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Alliance Description -->
+<div class="lg:col-span-7 flex flex-col gap-space-md">
+<div class="inline-flex items-center gap-2 self-start bg-secondary/30 text-secondary-fixed px-3 py-1 rounded-full font-eyebrow-accent text-eyebrow-accent uppercase">
+<span>STRATEGIC DIASPORA ALLIANCE</span>
+</div>
+<h2 class="font-headline-lg text-headline-lg text-on-primary">
+            Curated in Chennai. Dispatched with Grace Across Great Britain.
+          </h2>
+<p class="font-body-lg text-body-lg text-surface-container-highest leading-relaxed">
+            Previously, diaspora families wishing to bring authentic GIRI puja items or brass vigrahams to the UK faced exorbitant freight rates, weeks of shipping delays, customs declarations, and fragile items damaged in transit.
+          </p>
+<p class="font-body-md text-body-md text-surface-container-high leading-relaxed">
+            By partnering with <span class="text-secondary-fixed font-semibold">SHIVAYAA</span>, GIRI has bridged the oceans. Our London fulfillment team inspects every article, cushions sacred bronzes with precision, and provides a direct British customer helpline for festival bookings, bulk temple orders, and personalized home altar guidance.
+          </p>
+<div class="flex flex-wrap gap-4 pt-2">
+<div class="flex items-center gap-2 text-surface-container-highest font-body-sm text-body-sm">
+<span class="material-symbols-outlined text-secondary-fixed text-base">check_circle</span>
+<span>100% Tax &amp; VAT Prepaid</span>
+</div>
+<div class="flex items-center gap-2 text-surface-container-highest font-body-sm text-body-sm">
+<span class="material-symbols-outlined text-secondary-fixed text-base">check_circle</span>
+<span>Hassle-Free 14-Day UK Returns</span>
+</div>
+<div class="flex items-center gap-2 text-surface-container-highest font-body-sm text-body-sm">
+<span class="material-symbols-outlined text-secondary-fixed text-base">check_circle</span>
+<span>Direct Phone &amp; WhatsApp Seva Desk</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Temple Advisory & Seva Desk -->
+<section class="w-full bg-surface py-space-2xl">
+<div class="max-w-[1320px] mx-auto px-gutter">
+<div class="p-space-xl rounded-3xl bg-surface-container-low shadow-sm">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-lg items-center">
+<div class="lg:col-span-8 flex flex-col gap-3">
+<div class="flex items-center gap-2 text-secondary font-label-button text-[12px] uppercase tracking-wider">
+<span class="material-symbols-outlined text-sm">support_agent</span>
+<span>COMPLIMENTARY RITUAL GUIDANCE</span>
+</div>
+<h3 class="font-headline-lg text-headline-lg text-primary">The London Seva Desk &amp; Mandir Advisory</h3>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+              Unsure about idol orientation, proper abhishekam procedures for brass murtis, or assembling your Varalakshmi Vratham setup in an English apartment? Our resident seva advisory provides respectful Vedic clarification at zero cost.
+            </p>
+<div class="flex flex-wrap gap-3 pt-2">
+<span class="px-3 py-1 rounded-full bg-surface-container-highest font-body-sm text-[12px] text-on-surface">Vastu Altar Placement</span>
+<span class="px-3 py-1 rounded-full bg-surface-container-highest font-body-sm text-[12px] text-on-surface">Prana Pratishtha Inquiries</span>
+<span class="px-3 py-1 rounded-full bg-surface-container-highest font-body-sm text-[12px] text-on-surface">Custom Brass Murti Commissions</span>
+<span class="px-3 py-1 rounded-full bg-surface-container-highest font-body-sm text-[12px] text-on-surface">Temple &amp; Samaj Bulk Kits</span>
+</div>
+</div>
+<div class="lg:col-span-4 flex flex-col sm:flex-row lg:flex-col gap-3">
+<a class="inline-flex items-center justify-center gap-2 bg-primary text-on-primary py-3 px-6 rounded-full font-label-button text-label-button shadow-md hover:bg-primary-container transition-all" href="mailto:seva@giriuk.co.uk">
+<span class="material-symbols-outlined text-sm">mail</span>
+<span>Speak With a Temple Sevak</span>
+</a>
+<a class="inline-flex items-center justify-center gap-2 bg-surface-container-lowest text-primary py-3 px-6 rounded-full font-label-button text-label-button shadow-sm hover:bg-surface-container transition-all" data-path="festival-special" href="#">
+<span class="material-symbols-outlined text-sm">menu_book</span>
+<span>Read The Heritage Journal</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Voices of Heritage & Community Reassurance -->
+<section class="w-full bg-surface-container-low py-space-xl">
+<div class="max-w-[1320px] mx-auto px-gutter">
+<div class="flex items-center justify-between mb-space-lg">
+<div>
+<span class="font-eyebrow-accent text-eyebrow-accent uppercase tracking-widest text-secondary">DEVOTEE EXPERIENCES</span>
+<h2 class="font-headline-md text-headline-md text-primary">Voices from our UK Spiritual Family</h2>
+</div>
+<div class="flex items-center gap-1 text-secondary">
+<span class="material-symbols-outlined text-base" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="font-label-button text-label-button text-primary font-bold">4.9 / 5</span>
+<span class="font-body-sm text-[12px] text-on-surface-variant">(1,400+ UK Reviews)</span>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-space-lg">
+<div class="bg-surface-container-lowest p-space-lg rounded-2xl shadow-sm flex flex-col justify-between">
+<div class="flex flex-col gap-2">
+<div class="flex text-secondary mb-1">
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface italic leading-relaxed">
+              "Finding authentic Lalitha Sahasranama with Tamil transliteration in Manchester felt impossible until Giri UK. Arrived in two days, packed with sheer reverence in saffron wrap."
+            </p>
+</div>
+<div class="pt-4">
+<p class="font-label-nav text-label-nav text-primary">Dr. Radhika Sundaram</p>
+<p class="font-body-sm text-[12px] text-on-surface-variant">Altrincham, Greater Manchester</p>
+</div>
+</div>
+<div class="bg-surface-container-lowest p-space-lg rounded-2xl shadow-sm flex flex-col justify-between">
+<div class="flex flex-col gap-2">
+<div class="flex text-secondary mb-1">
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface italic leading-relaxed">
+              "The brass Krishna idol is masterclass temple quality. The facial expression has so much karuna. I am deeply thankful to the SHIVAYAA team for bringing genuine Giri heritage to London."
+            </p>
+</div>
+<div class="pt-4">
+<p class="font-label-nav text-label-nav text-primary">Venkatesh Raghavan</p>
+<p class="font-body-sm text-[12px] text-on-surface-variant">Harrow, London</p>
+</div>
+</div>
+<div class="bg-surface-container-lowest p-space-lg rounded-2xl shadow-sm flex flex-col justify-between">
+<div class="flex flex-col gap-2">
+<div class="flex text-secondary mb-1">
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface italic leading-relaxed">
+              "Their UK panchangam calculations match our local solar hours precisely. We coordinate all our temple mahotsavams and domestic pujas through their publications."
+            </p>
+</div>
+<div class="pt-4">
+<p class="font-label-nav text-label-nav text-primary">Acharya Shreedhar Bhatt</p>
+<p class="font-body-sm text-[12px] text-on-surface-variant">Southall Hindu Mandir Council</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Final Call to Action -->
+<section class="w-full bg-surface-container py-space-2xl text-center">
+<div class="max-w-[800px] mx-auto px-gutter flex flex-col items-center gap-space-md">
+<div class="w-14 h-14 rounded-full bg-secondary-fixed/50 flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined text-2xl" style="font-variation-settings: 'FILL' 1;">loyalty</span>
+</div>
+<h2 class="font-headline-lg text-headline-lg text-primary">Grace Your Sacred Space Today</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant leading-relaxed">
+        Whether you are replenishing sacred daily essentials or seeking a timeless brass deity for your prayer room, experience seven decades of uncompromising reverence.
+      </p>
+<div class="flex flex-wrap items-center justify-center gap-space-md pt-2">
+<a class="bg-primary text-on-primary px-8 py-3.5 rounded-full font-label-button text-label-button shadow-md hover:bg-primary-container transition-all" data-path="festival-special" href="#">
+          Explore The Complete Collection
+        </a>
+<a class="bg-surface-container-lowest text-primary px-8 py-3.5 rounded-full font-label-button text-label-button shadow-sm hover:bg-surface-container-high transition-all" data-path="puja" href="#">
+          View Puja Samagri Essentials
+        </a>
+</div>
+</div>
+</section>
+</div></main><section class="w-full bg-surface-container border-y border-surface-container-highest py-6"><div class="max-w-[1320px] mx-auto px-gutter"><div class="grid grid-cols-2 md:grid-cols-5 gap-4 items-center"><div class="flex items-center gap-3 p-2"><div class="w-10 h-10 rounded-full bg-primary-container/10 flex items-center justify-center shrink-0"><span class="material-symbols-outlined text-primary text-xl">verified</span></div><div><p class="font-label-nav text-label-nav text-on-surface">100% Authentic</p><p class="font-body-sm text-[12px] text-on-surface-variant">Sourced from sacred sanctums</p></div></div><div class="flex items-center gap-3 p-2"><div class="w-10 h-10 rounded-full bg-primary-container/10 flex items-center justify-center shrink-0"><span class="material-symbols-outlined text-primary text-xl">local_shipping</span></div><div><p class="font-label-nav text-label-nav text-on-surface">Express UK Delivery</p><p class="font-body-sm text-[12px] text-on-surface-variant">Free dispatch on £50+</p></div></div><div class="flex items-center gap-3 p-2"><div class="w-10 h-10 rounded-full bg-primary-container/10 flex items-center justify-center shrink-0"><span class="material-symbols-outlined text-primary text-xl">inventory_2</span></div><div><p class="font-label-nav text-label-nav text-on-surface">Careful Packaging</p><p class="font-body-sm text-[12px] text-on-surface-variant">Transit-safe sacred handling</p></div></div><div class="flex items-center gap-3 p-2"><div class="w-10 h-10 rounded-full bg-primary-container/10 flex items-center justify-center shrink-0"><span class="material-symbols-outlined text-primary text-xl">lock</span></div><div><p class="font-label-nav text-label-nav text-on-surface">Secure Payments</p><p class="font-body-sm text-[12px] text-on-surface-variant">256-bit encrypted checkout</p></div></div><div class="flex items-center gap-3 p-2 col-span-2 md:col-span-1"><div class="w-10 h-10 rounded-full bg-primary-container/10 flex items-center justify-center shrink-0"><span class="material-symbols-outlined text-primary text-xl">support_agent</span></div><div><p class="font-label-nav text-label-nav text-on-surface">Dedicated Support</p><p class="font-body-sm text-[12px] text-on-surface-variant">UK &amp; EU assistance desk</p></div></div></div></div></section><footer class="w-full bg-primary text-on-primary"><div class="max-w-[1320px] mx-auto px-gutter pt-space-2xl pb-space-xl"><div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-space-xl"><div class="lg:col-span-2 flex flex-col gap-space-md"><div class="flex flex-col"><div class="flex items-center gap-space-xs"><span class="font-headline-lg text-headline-lg tracking-tight text-on-primary font-bold leading-none">GIRI</span><span class="font-eyebrow-accent text-eyebrow-accent uppercase bg-secondary text-on-secondary px-1.5 py-0.5 rounded">UK</span></div><span class="font-eyebrow-accent text-eyebrow-accent tracking-widest uppercase text-secondary-fixed mt-1">In UK &amp; EU by SHIVAYAA</span></div><p class="font-body-md text-body-md text-surface-container-highest max-w-sm leading-relaxed">Authentic Indian cultural treasures, sacred Vedic literature, handcrafted brass murtis, and ritual puja essentials curated reverently for homes across the UK and Europe.</p><div class="flex items-center gap-space-sm pt-space-xs"><a class="w-9 h-9 rounded-full bg-primary-container flex items-center justify-center text-secondary-fixed hover:bg-secondary hover:text-on-secondary transition-colors" href="#"><span class="material-symbols-outlined text-base">photo_camera</span></a><a class="w-9 h-9 rounded-full bg-primary-container flex items-center justify-center text-secondary-fixed hover:bg-secondary hover:text-on-secondary transition-colors" href="#"><span class="material-symbols-outlined text-base">share</span></a><a class="w-9 h-9 rounded-full bg-primary-container flex items-center justify-center text-secondary-fixed hover:bg-secondary hover:text-on-secondary transition-colors" href="#"><span class="material-symbols-outlined text-base">smart_display</span></a><a class="w-9 h-9 rounded-full bg-primary-container flex items-center justify-center text-secondary-fixed hover:bg-secondary hover:text-on-secondary transition-colors" href="#"><span class="material-symbols-outlined text-base">push_pin</span></a></div></div><div class="flex flex-col gap-space-sm"><span class="font-eyebrow-accent text-eyebrow-accent text-secondary-fixed uppercase tracking-wider mb-2">Shop Categories</span><a class="font-body-sm text-body-sm text-surface-container-highest hover:text-secondary-fixed transition-colors" data-path="festival-special" href="#">Festival Specials</a><a class="font-body-sm text-body-sm text-surface-container-highest hover:text-secondary-fixed transition-colors" data-path="puja" href="#">Puja Samagri</a><a class="font-body-sm text-body-sm text-surface-container-highest hover:text-secondary-fixed transition-colors" data-path="books" href="#">Sacred Books &amp; Stotras</a><a class="font-body-sm text-body-sm text-surface-container-highest hover:text-secondary-fixed transition-colors" data-path="idols-handicrafts" href="#">Brass Idols &amp; Diyas</a><a class="font-body-sm text-body-sm text-surface-container-highest hover:text-secondary-fixed transition-colors" data-path="dancewear-jewellery" href="#">Classical Dance Jewellery</a><a class="font-body-sm text-body-sm text-surface-container-highest hover:text-secondary-fixed transition-colors" data-path="textiles" href="#">Pure Silk &amp; Dhotis</a></div><div class="flex flex-col gap-space-sm"><span class="font-eyebrow-accent text-eyebrow-accent text-secondary-fixed uppercase tracking-wider mb-2">My Account &amp; Orders</span><a class="font-body-sm text-body-sm text-surface-container-highest hover:text-secondary-fixed transition-colors" data-path="giri-uk-customer-account-dashboard" href="#">Account Overview</a><a class="font-body-sm text-body-sm text-surface-container-highest hover:text-secondary-fixed transition-colors" data-path="giri-uk-customer-order-history" href="#">Past Orders &amp; Invoices</a><a class="font-body-sm text-body-sm text-surface-container-highest hover:text-secondary-fixed transition-colors" data-path="giri-uk-order-confirmation-thank-you" href="#">Track Consignment</a><a class="font-body-sm text-body-sm text-surface-container-highest hover:text-secondary-fixed transition-colors" data-path="shipping-policy" href="#">UK &amp; EU Shipping Rates</a><a class="font-body-sm text-body-sm text-surface-container-highest hover:text-secondary-fixed transition-colors" data-path="returns" href="#">Returns &amp; Exchanges</a><a class="font-body-sm text-body-sm text-surface-container-highest hover:text-secondary-fixed transition-colors" data-path="faqs" href="#">Help &amp; FAQs</a></div><div class="flex flex-col gap-space-md"><span class="font-eyebrow-accent text-eyebrow-accent text-secondary-fixed uppercase tracking-wider">Stay in Touch</span><p class="font-body-sm text-body-sm text-surface-container-highest">Subscribe for spiritual insights, festival muhurthams, and exclusive boutique previews.</p><form class="flex flex-col gap-space-xs"><div class="flex items-center rounded-full bg-primary-container p-1 shadow-[0_2px_8px_rgba(0,0,0,0.12)]"><input class="w-full px-4 py-2 bg-transparent text-on-primary placeholder:text-surface-variant font-body-sm text-body-sm focus:outline-none" placeholder="Your email address" type="email"/><button class="px-4 py-2 rounded-full bg-secondary text-on-secondary font-label-button text-label-button hover:bg-secondary-fixed hover:text-on-secondary-fixed transition-colors shrink-0 flex items-center justify-center" type="button"><span class="material-symbols-outlined text-sm">arrow_forward</span></button></div></form><div class="flex items-center gap-space-xs text-secondary-fixed font-body-sm text-body-sm"><span class="material-symbols-outlined text-sm">verified</span><span>Authentic Heritage Guarantee</span></div></div></div><div class="mt-space-2xl pt-space-lg flex flex-col md:flex-row items-center justify-between gap-space-md bg-primary-container/40 p-space-md rounded-xl"><div class="flex flex-col md:flex-row items-center gap-space-xs text-surface-container-highest font-body-sm text-body-sm text-center md:text-left"><span>In UK &amp; EU by SHIVAYAA</span><span class="hidden md:inline">|</span><span>© 2026 GIRI UK. All rights reserved.</span></div><div class="flex items-center gap-space-xs flex-wrap justify-center"><span class="px-2 py-1 bg-surface-container-lowest text-primary rounded font-label-button text-[10px] font-bold">VISA</span><span class="px-2 py-1 bg-surface-container-lowest text-primary rounded font-label-button text-[10px] font-bold">MASTERCARD</span><span class="px-2 py-1 bg-surface-container-lowest text-primary rounded font-label-button text-[10px] font-bold">MAESTRO</span><span class="px-2 py-1 bg-surface-container-lowest text-primary rounded font-label-button text-[10px] font-bold">AMEX</span><span class="px-2 py-1 bg-surface-container-lowest text-primary rounded font-label-button text-[10px] font-bold">APPLE PAY</span><span class="px-2 py-1 bg-surface-container-lowest text-primary rounded font-label-button text-[10px] font-bold">GOOGLE PAY</span></div></div></div></footer></body></html>

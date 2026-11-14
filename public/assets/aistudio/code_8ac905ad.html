@@ -1,0 +1,633 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_standard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&amp;family=Manrope:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "on-tertiary-fixed-variant": "#574500", "secondary-fixed": "#ffdea0", "inverse-on-surface": "#f3f0e9", "secondary": "#745b22", "on-primary-fixed-variant": "#174f46", "on-secondary-container": "#795f26", "on-primary-fixed": "#00201b", "primary-fixed-dim": "#9bd1c5", "secondary-fixed-dim": "#e4c27f", "on-tertiary-container": "#4f3e00", "surface-dim": "#dcdad3", "primary": "#00362f", "tertiary-fixed": "#ffe088", "surface-variant": "#e5e2db", "on-primary-container": "#88beb2", "surface-container-high": "#ebe8e1", "inverse-surface": "#31312c", "outline": "#707976", "on-error-container": "#93000a", "surface": "#fcf9f2", "surface-container-low": "#f6f3ec", "surface-container-lowest": "#ffffff", "surface-container-highest": "#e5e2db", "primary-fixed": "#b7eee1", "on-background": "#1c1c18", "on-surface": "#1c1c18", "primary-container": "#164e45", "background": "#fcf9f2", "tertiary-fixed-dim": "#e9c349", "tertiary-container": "#cca730", "on-secondary": "#ffffff", "secondary-container": "#ffdb96", "error": "#ba1a1a", "tertiary": "#735c00", "on-primary": "#ffffff", "surface-bright": "#fcf9f2", "error-container": "#ffdad6", "on-surface-variant": "#404946", "on-error": "#ffffff", "on-secondary-fixed": "#261900", "on-secondary-fixed-variant": "#5a430b", "on-tertiary-fixed": "#241a00", "on-tertiary": "#ffffff", "surface-tint": "#33675e", "surface-container": "#f0eee7", "outline-variant": "#bfc8c5", "inverse-primary": "#9bd1c5" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "space-lg": "1.5rem", "space-sm": "0.5rem", "margin-mobile": "1rem", "space-xl": "2.5rem", "space-2xl": "4rem", "space-md": "1rem", "gutter-mobile": "1rem", "margin": "3rem", "space-xs": "0.25rem", "gutter": "1.5rem" }, "fontFamily": { "label-button": ["Manrope"], "headline-lg-mobile": ["EB Garamond"], "body-md": ["Manrope"], "headline-sm": ["EB Garamond"], "price-headline": ["Manrope"], "label-nav": ["Manrope"], "headline-xl-mobile": ["EB Garamond"], "eyebrow-accent": ["Manrope"], "headline-md": ["EB Garamond"], "headline-lg": ["EB Garamond"], "body-lg": ["Manrope"], "headline-xl": ["EB Garamond"], "body-sm": ["Manrope"] }, "fontSize": { "label-button": ["13px", { "lineHeight": "18px", "letterSpacing": "0.02em", "fontWeight": "600" }], "headline-lg-mobile": ["28px", { "lineHeight": "36px", "letterSpacing": "-0.005em", "fontWeight": "500" }], "body-md": ["15px", { "lineHeight": "24px", "fontWeight": "400" }], "headline-sm": ["22px", { "lineHeight": "30px", "fontWeight": "600" }], "price-headline": ["18px", { "lineHeight": "24px", "letterSpacing": "-0.02em", "fontWeight": "700" }], "label-nav": ["14px", { "lineHeight": "20px", "fontWeight": "600" }], "headline-xl-mobile": ["36px", { "lineHeight": "44px", "letterSpacing": "-0.01em", "fontWeight": "500" }], "eyebrow-accent": ["11px", { "lineHeight": "16px", "letterSpacing": "0.14em", "fontWeight": "700" }], "headline-md": ["28px", { "lineHeight": "36px", "fontWeight": "600" }], "headline-lg": ["40px", { "lineHeight": "48px", "letterSpacing": "-0.01em", "fontWeight": "500" }], "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }], "headline-xl": ["56px", { "lineHeight": "64px", "letterSpacing": "-0.01em", "fontWeight": "500" }], "body-sm": ["13px", { "lineHeight": "20px", "fontWeight": "400" }] } } } };</script></head><body class="bg-background font-body-md text-on-surface antialiased"><header class="fixed top-0 left-0 right-0 z-50 bg-surface/95 backdrop-blur-md shadow-[0_4px_16px_-2px_rgba(22,78,69,0.06)]"><div class="bg-primary-container text-on-primary py-1 px-margin flex items-center justify-between font-label-button text-label-button"><div class="flex items-center gap-space-xs"><span class="material-symbols-outlined text-sm text-secondary-fixed">sell</span><span>Use Code <span class="text-secondary-fixed font-bold tracking-wider">GIRIUK2026</span> and Get 10% Off</span></div><div class="hidden md:flex items-center gap-space-xs text-on-primary-container"><span class="material-symbols-outlined text-sm text-secondary-fixed">local_shipping</span><span class="text-on-primary">Free UK Delivery on Orders Above £50</span></div><div class="flex items-center gap-space-md text-on-primary-container text-body-sm font-body-sm"><a class="hover:text-on-primary transition-colors" data-path="giri-uk-order-confirmation-thank-you" href="#">Track Order</a><span class="opacity-40">|</span><div class="flex items-center gap-space-xs"><span class="material-symbols-outlined text-sm">currency_pound</span><span>GBP (£)</span></div></div></div><div class="h-20 max-w-[1320px] mx-auto px-gutter flex items-center justify-between gap-space-lg"><div class="flex items-center gap-space-md shrink-0"><a class="flex flex-col text-inherit no-underline" data-path="festival-special" href="#"><div class="flex items-center gap-space-xs"><span class="font-headline-md text-headline-md tracking-tight text-primary font-bold leading-none">GIRI</span><span class="font-eyebrow-accent text-eyebrow-accent uppercase bg-secondary text-on-secondary px-1.5 py-0.5 rounded">UK</span></div><span class="font-eyebrow-accent text-[9px] tracking-widest uppercase text-secondary font-semibold mt-0.5">In UK &amp; EU by SHIVAYAA</span></a></div><div class="flex-1 max-w-2xl"><div class="relative flex items-center w-full"><span class="material-symbols-outlined absolute left-4 text-outline">search</span><input class="w-full pl-11 pr-4 py-2.5 rounded-full bg-surface-container-low text-on-surface placeholder:text-outline-variant font-body-sm text-body-sm focus:outline-none focus:bg-surface-container-lowest focus:ring-1 focus:ring-secondary transition-all shadow-[inset_0_1px_3px_rgba(0,0,0,0.04)]" placeholder="Search for Puja Items, Books, Idols, Jewellery..." type="text"/></div></div><div class="flex items-center gap-space-lg shrink-0"><div class="relative group"><a class="flex items-center gap-space-xs text-on-surface-variant hover:text-primary transition-colors font-label-nav text-label-nav" data-path="giri-uk-customer-account-dashboard" href="#"><img alt="Ananya S." class="w-7 h-7 rounded-full object-cover ring-1 ring-secondary-container" src="https://lh3.googleusercontent.com/aida/AEtjO1WtQs4tb94R3VtDclknX-e1_zNOt0cljTd_m9BOhgepQ4yXjLuCraAYnBFNNwdDA7LawqOg_nVorbI_VDA_TfET6KctKpscmsRs9L82ua3mP38e9fE25VqxOXi_TlTXpdiP3vDtYFcqI_iq_S5vBGo7UsYTzEv0XstgP2GPCfNrVh9Z1NR2PZcAFlA21UjwybKFkh4ru4dGEEBmlgCxQ7gNeXpo77nl5M8Lh1xREGNRngsl-VXxKKRycCS1"/><span class="hidden lg:inline">My Account (Ananya S.)</span><span class="material-symbols-outlined text-sm text-outline">expand_more</span></a><div class="absolute right-0 top-full mt-2 w-56 bg-surface-container-lowest rounded-xl shadow-[0_12px_28px_-4px_rgba(22,78,69,0.12)] p-2 hidden group-hover:flex flex-col z-50 border-t-2 border-secondary"><a class="px-3 py-2 rounded-lg text-body-sm text-on-surface hover:bg-surface-container-low hover:text-primary transition-colors flex items-center justify-between" data-path="giri-uk-customer-account-dashboard" href="#"><span>Account Dashboard</span><span class="material-symbols-outlined text-sm text-outline">dashboard</span></a><a class="px-3 py-2 rounded-lg text-body-sm text-on-surface hover:bg-surface-container-low hover:text-primary transition-colors flex items-center justify-between" data-path="giri-uk-customer-order-history" href="#"><span>Order History</span><span class="material-symbols-outlined text-sm text-outline">receipt_long</span></a><div class="h-px bg-surface-container-high my-1"></div><a class="px-3 py-2 rounded-lg text-body-sm text-on-surface hover:bg-surface-container-low hover:text-primary transition-colors flex items-center justify-between" data-path="giri-uk-sign-in-customer-login" href="#"><span>Sign Out</span><span class="material-symbols-outlined text-sm text-outline">logout</span></a></div></div><a class="flex items-center gap-space-xs text-on-surface-variant hover:text-primary transition-colors font-label-nav text-label-nav" data-path="wishlist" href="#"><span class="material-symbols-outlined text-xl">favorite</span><span class="hidden lg:inline">Wishlist</span></a><a class="flex items-center gap-space-sm text-on-surface-variant hover:text-primary transition-colors font-label-nav text-label-nav" data-path="cart" href="#"><div class="relative flex items-center justify-center"><span class="material-symbols-outlined text-2xl text-primary">shopping_bag</span><span class="absolute -top-1.5 -right-2 bg-secondary-container text-on-secondary-container font-price-headline text-[11px] font-bold w-5 h-5 rounded-full flex items-center justify-center">2</span></div><span class="hidden lg:inline font-price-headline text-price-headline text-primary">£48.50</span></a></div></div><div class="bg-surface-container-low shadow-[0_1px_4px_rgba(22,78,69,0.04)]"><div class="max-w-[1320px] mx-auto px-gutter"><nav class="flex items-center justify-between overflow-x-auto py-2.5 gap-space-md" data-active-classes="text-primary font-bold border-b-2 border-secondary"><a class="font-label-nav text-label-nav text-on-surface-variant hover:text-primary whitespace-nowrap transition-colors" data-path="festival-special" href="#">Festival Special</a><a class="font-label-nav text-label-nav text-on-surface-variant hover:text-primary whitespace-nowrap transition-colors" data-path="new-arrivals" href="#">New Arrivals</a><a class="font-label-nav text-label-nav text-on-surface-variant hover:text-primary whitespace-nowrap transition-colors" data-path="on-demand" href="#">On Demand</a><a class="font-label-nav text-label-nav text-on-surface-variant hover:text-primary whitespace-nowrap transition-colors" data-path="books" href="#">Books</a><a class="font-label-nav text-label-nav text-on-surface-variant hover:text-primary whitespace-nowrap transition-colors" data-path="puja" href="#">Puja</a><a class="font-label-nav text-label-nav text-on-surface-variant hover:text-primary whitespace-nowrap transition-colors" data-path="idols-handicrafts" href="#">Idols &amp; Handicrafts</a><a class="font-label-nav text-label-nav text-on-surface-variant hover:text-primary whitespace-nowrap transition-colors" data-path="dancewear-jewellery" href="#">Dancewear &amp; Jewellery</a><a class="font-label-nav text-label-nav text-on-surface-variant hover:text-primary whitespace-nowrap transition-colors" data-path="home-decor-gifts" href="#">Home Decor &amp; Gifts</a><a class="font-label-nav text-label-nav text-on-surface-variant hover:text-primary whitespace-nowrap transition-colors" data-path="textiles" href="#">Textiles</a></nav></div></div></header><main class="w-full pt-36 bg-surface min-h-[calc(100vh-144px)]"><div class="flex flex-col w-full">
+<!-- Top Breadcrumb & Micro Tracker Bar -->
+<div class="w-full bg-surface-container-low">
+<div class="max-w-[1320px] mx-auto px-gutter py-3 flex flex-wrap items-center justify-between gap-space-sm text-body-sm">
+<div class="flex items-center gap-2 text-on-surface-variant font-label-nav text-label-nav">
+<a class="hover:text-primary transition-colors flex items-center gap-1" href="#">
+<span class="material-symbols-outlined text-base">home</span>
+<span>Home</span>
+</a>
+<span class="text-outline-variant">/</span>
+<a class="hover:text-primary transition-colors" href="#">Customer Care</a>
+<span class="text-outline-variant">/</span>
+<span class="text-primary font-bold">Delivery, Shipping &amp; Returns</span>
+</div>
+<div class="hidden sm:flex items-center gap-3 text-on-surface-variant">
+<span class="flex items-center gap-1 text-[12px] font-medium bg-surface-container px-2.5 py-1 rounded-full text-secondary">
+<span class="w-2 h-2 rounded-full bg-primary-container animate-pulse"></span>
+          Wembley Hub Dispatch: Active Today (Cut-off 2:00 PM GMT)
+        </span>
+</div>
+</div>
+</div>
+<!-- Hero Editorial Header with Sacred Ornamentation -->
+<section class="w-full relative overflow-hidden bg-gradient-to-b from-surface-container-low via-surface to-background py-space-xl">
+<div class="max-w-[1320px] mx-auto px-gutter relative z-10">
+<div class="max-w-3xl flex flex-col gap-space-sm">
+<div class="inline-flex items-center gap-2 w-fit bg-secondary-container/60 text-on-secondary-container px-3 py-1 rounded-full">
+<span class="material-symbols-outlined text-sm text-secondary">verified_user</span>
+<span class="font-eyebrow-accent text-eyebrow-accent uppercase tracking-widest">Sanctified Logistics &amp; Devotee Peace of Mind</span>
+</div>
+<h1 class="font-headline-xl text-headline-xl text-primary font-serif tracking-tight leading-tight">
+          Our Sacred Delivery &amp; Reverent Returns Protocol
+        </h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant leading-relaxed">
+          Handled with devotional care from our London &amp; Wembley logistics sanctorum directly to your home altar. Transparent UK &amp; EU timelines, guaranteed safe transit for sanctified murtis, and our respectful 14-day restitution commitment.
+        </p>
+</div>
+<!-- Quick Highlights Grid (3-Card Accentuated Ribbon) -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-space-md mt-space-xl">
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex items-start gap-4 hover:shadow-md transition-all">
+<div class="w-12 h-12 rounded-xl bg-secondary-fixed/40 flex items-center justify-center shrink-0 text-secondary">
+<span class="material-symbols-outlined text-2xl">local_shipping</span>
+</div>
+<div class="flex flex-col">
+<span class="font-eyebrow-accent text-eyebrow-accent text-secondary uppercase tracking-wider">Free Delivery Threshold</span>
+<h2 class="font-headline-sm text-headline-sm text-primary font-semibold mt-0.5">Complimentary UK Tracked</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">Orders £50 and over qualify automatically. Flat £3.99 for all smaller puja orders via Royal Mail 48.</p>
+</div>
+</div>
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex items-start gap-4 hover:shadow-md transition-all">
+<div class="w-12 h-12 rounded-xl bg-primary-fixed/50 flex items-center justify-center shrink-0 text-primary">
+<span class="material-symbols-outlined text-2xl">schedule</span>
+</div>
+<div class="flex flex-col">
+<span class="font-eyebrow-accent text-eyebrow-accent text-secondary uppercase tracking-wider">Same-Day London Dispatch</span>
+<h2 class="font-headline-sm text-headline-sm text-primary font-semibold mt-0.5">2:00 PM GMT Cut-Off</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">Orders placed Monday through Friday ship same day from our dedicated Wembley cultural depot.</p>
+</div>
+</div>
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex items-start gap-4 hover:shadow-md transition-all">
+<div class="w-12 h-12 rounded-xl bg-secondary-container flex items-center justify-center shrink-0 text-on-secondary-container">
+<span class="material-symbols-outlined text-2xl">temple_hindu</span>
+</div>
+<div class="flex flex-col">
+<span class="font-eyebrow-accent text-eyebrow-accent text-secondary uppercase tracking-wider">Sacred Restitution</span>
+<h2 class="font-headline-sm text-headline-sm text-primary font-semibold mt-0.5">14-Day Respectful Return</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">Hassle-free QR returns for lifestyle &amp; books; reverent temple protocol for sanctified murtis &amp; brassware.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Section 1: Detailed Rates & Tariffs Matrix -->
+<section class="w-full py-space-2xl bg-surface">
+<div class="max-w-[1320px] mx-auto px-gutter">
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-space-md mb-space-lg">
+<div>
+<span class="font-eyebrow-accent text-eyebrow-accent text-secondary uppercase tracking-widest">TRANSPARENT UK &amp; EUROPEAN SHIPPING</span>
+<h2 class="font-headline-lg text-headline-lg text-primary font-serif mt-1">Delivery Methods, Timeframes &amp; Costs</h2>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-2xl mt-2">
+            Every parcel is barcoded, fully insured against transit shock, and dispatched in custom protective materials to honor sacred goods.
+          </p>
+</div>
+<div class="flex items-center gap-2 text-on-surface-variant text-body-sm">
+<span class="material-symbols-outlined text-secondary">info</span>
+<span>Prices include all UK VAT at prevailing rates.</span>
+</div>
+</div>
+<!-- Shipping Rates Table -->
+<div class="overflow-x-auto rounded-xl bg-surface-container-lowest shadow-sm">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="bg-surface-container text-on-surface font-label-nav text-label-nav">
+<th class="py-4 px-6">Delivery Service</th>
+<th class="py-4 px-6">Carrier &amp; Tracking</th>
+<th class="py-4 px-6">Estimated Transit Time</th>
+<th class="py-4 px-6">Cost / Threshold</th>
+<th class="py-4 px-6 text-right">Special Notes</th>
+</tr>
+</thead>
+<tbody class="divide-y-0 text-body-md">
+<tr class="hover:bg-surface-container-low transition-colors">
+<td class="py-5 px-6">
+<div class="flex items-center gap-3">
+<div class="w-9 h-9 rounded-full bg-primary-container/10 flex items-center justify-center text-primary shrink-0">
+<span class="material-symbols-outlined text-lg">local_shipping</span>
+</div>
+<div>
+<span class="font-label-button text-label-button text-primary block">UK Standard Tracked</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Recommended for non-urgent items</span>
+</div>
+</div>
+</td>
+<td class="py-5 px-6">
+<span class="inline-flex items-center gap-1 font-body-sm text-on-surface">
+<span class="font-semibold text-error">Royal Mail</span> Tracked 48
+                </span>
+</td>
+<td class="py-5 px-6 text-on-surface-variant">
+<span class="font-semibold text-on-surface">2–3 Business Days</span>
+<span class="block font-body-sm text-body-sm">SMS &amp; Email status updates</span>
+</td>
+<td class="py-5 px-6">
+<div class="flex flex-col">
+<span class="font-price-headline text-price-headline text-primary">£3.99</span>
+<span class="font-body-sm text-body-sm text-secondary font-bold">FREE on orders over £50</span>
+</div>
+</td>
+<td class="py-5 px-6 text-right">
+<span class="inline-block bg-surface-container px-3 py-1 rounded-full text-body-sm text-on-surface-variant">No signature required; safe place enabled</span>
+</td>
+</tr>
+<tr class="hover:bg-surface-container-low transition-colors bg-surface-container-lowest">
+<td class="py-5 px-6">
+<div class="flex items-center gap-3">
+<div class="w-9 h-9 rounded-full bg-secondary/15 flex items-center justify-center text-secondary shrink-0">
+<span class="material-symbols-outlined text-lg">speed</span>
+</div>
+<div>
+<span class="font-label-button text-label-button text-primary block">UK Priority Express</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Ideal for auspicious dates &amp; pujas</span>
+</div>
+</div>
+</td>
+<td class="py-5 px-6">
+<span class="inline-flex items-center gap-1 font-body-sm text-on-surface">
+<span class="font-semibold text-error">Royal Mail</span> Tracked 24
+                </span>
+</td>
+<td class="py-5 px-6 text-on-surface-variant">
+<span class="font-semibold text-on-surface">1–2 Business Days</span>
+<span class="block font-body-sm text-body-sm">Priority mail sorting stream</span>
+</td>
+<td class="py-5 px-6">
+<span class="font-price-headline text-price-headline text-primary">£5.99</span>
+</td>
+<td class="py-5 px-6 text-right">
+<span class="inline-block bg-secondary-fixed/50 px-3 py-1 rounded-full text-body-sm text-on-secondary-fixed font-medium">Delivers Mon–Sat across mainland UK</span>
+</td>
+</tr>
+<tr class="hover:bg-surface-container-low transition-colors">
+<td class="py-5 px-6">
+<div class="flex items-center gap-3">
+<div class="w-9 h-9 rounded-full bg-primary/10 flex items-center justify-center text-primary shrink-0">
+<span class="material-symbols-outlined text-lg">electric_bolt</span>
+</div>
+<div>
+<span class="font-label-button text-label-button text-primary block">Guaranteed Next Day by 1:00 PM</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">For urgent temple preparations</span>
+</div>
+</div>
+</td>
+<td class="py-5 px-6">
+<span class="inline-flex items-center gap-1 font-body-sm text-on-surface">
+<span class="font-semibold text-primary">DPD Express</span> or RM Special
+                </span>
+</td>
+<td class="py-5 px-6 text-on-surface-variant">
+<span class="font-semibold text-on-surface">Next Working Day</span>
+<span class="block font-body-sm text-body-sm">Guaranteed delivery before 1:00 PM</span>
+</td>
+<td class="py-5 px-6">
+<span class="font-price-headline text-price-headline text-primary">£8.50</span>
+</td>
+<td class="py-5 px-6 text-right">
+<span class="inline-block bg-primary-fixed/40 px-3 py-1 rounded-full text-body-sm text-on-primary-fixed font-semibold">1-Hour interactive delivery slot</span>
+</td>
+</tr>
+<tr class="hover:bg-surface-container-low transition-colors bg-surface-container-lowest">
+<td class="py-5 px-6">
+<div class="flex items-center gap-3">
+<div class="w-9 h-9 rounded-full bg-secondary-container flex items-center justify-center text-on-secondary-container shrink-0">
+<span class="material-symbols-outlined text-lg">public</span>
+</div>
+<div>
+<span class="font-label-button text-label-button text-primary block">European Union (EU) Tracked</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Direct service to 24 European nations</span>
+</div>
+</div>
+</td>
+<td class="py-5 px-6">
+<span class="inline-flex items-center gap-1 font-body-sm text-on-surface">
+<span class="font-semibold text-primary">DHL Express / DPD Europe</span>
+</span>
+</td>
+<td class="py-5 px-6 text-on-surface-variant">
+<span class="font-semibold text-on-surface">3–5 Business Days</span>
+<span class="block font-body-sm text-body-sm">Full door-to-door tracking</span>
+</td>
+<td class="py-5 px-6">
+<div class="flex flex-col">
+<span class="font-price-headline text-price-headline text-primary">£12.50</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Standard weights up to 2.5kg</span>
+</div>
+</td>
+<td class="py-5 px-6 text-right">
+<span class="inline-block bg-primary-container text-on-primary px-3 py-1 rounded-full text-body-sm font-medium">IOSS Pre-cleared: No surprise customs fees</span>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- Highlands, Islands & Dispatch Notes Banner -->
+<div class="mt-space-md grid grid-cols-1 md:grid-cols-2 gap-space-md">
+<div class="bg-surface-container-low p-space-md rounded-xl flex items-start gap-3">
+<span class="material-symbols-outlined text-secondary text-2xl shrink-0">pin_drop</span>
+<div>
+<h3 class="font-label-button text-label-button text-primary">Scottish Highlands, Northern Ireland &amp; Channel Islands</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">
+              We never levy surcharges on Royal Mail Tracked services for offshore UK addresses (BT, IV, HS, ZE, IM, GY, JE). Please allow an additional 24 hours for final inter-island ferry transfer.
+            </p>
+</div>
+</div>
+<div class="bg-surface-container-low p-space-md rounded-xl flex items-start gap-3">
+<span class="material-symbols-outlined text-secondary text-2xl shrink-0">inventory</span>
+<div>
+<h3 class="font-label-button text-label-button text-primary">EU IOSS (Import One-Stop Shop) Guarantee</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">
+              For EU consignments under €150, VAT is collected at our UK checkout. Your parcel clears European customs electronically without local administration handling surcharges or postal delays.
+            </p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Section 2: Sanctified Transit Packaging & Unboxing Protocol (Visual Workflow) -->
+<section class="w-full py-space-2xl bg-surface-container">
+<div class="max-w-[1320px] mx-auto px-gutter">
+<div class="text-center max-w-2xl mx-auto mb-space-xl">
+<div class="inline-flex items-center gap-2 bg-secondary-fixed/50 px-3 py-1 rounded-full text-secondary mb-2">
+<span class="material-symbols-outlined text-sm">spa</span>
+<span class="font-eyebrow-accent text-eyebrow-accent uppercase tracking-widest">Reverence in Every Parcel</span>
+</div>
+<h2 class="font-headline-lg text-headline-lg text-primary font-serif">The Sanctified Packaging Standard</h2>
+<p class="font-body-md text-body-md text-on-surface-variant mt-2">
+          Sacred idols, traditional Vilakkus, and holy stotra books require more than standard commerce logistics. Every item is treated as an extension of our collective faith.
+        </p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-space-md">
+<!-- Step 1 -->
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex flex-col justify-between hover:shadow-md transition-all relative overflow-hidden group">
+<div class="absolute top-0 right-0 w-16 h-16 bg-surface-container-high/50 rounded-bl-3xl flex items-start justify-end p-3 text-secondary font-bold font-price-headline">
+            01
+          </div>
+<div>
+<div class="w-12 h-12 rounded-xl bg-primary-container/10 text-primary flex items-center justify-center mb-space-sm">
+<span class="material-symbols-outlined text-2xl">sanitizer</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-primary font-semibold">Sanctum Inspection &amp; Cleansing</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-2">
+              Brass metal purity and casting balance are verified by seasoned sevaks. Surfaces are gently wiped with pure natural cotton infused with Gangajal and sacred vibhuti aroma.
+            </p>
+</div>
+<div class="mt-space-md pt-space-xs text-[11px] font-eyebrow-accent uppercase tracking-wider text-secondary">
+            Devotional Quality Seal
+          </div>
+</div>
+<!-- Step 2 -->
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex flex-col justify-between hover:shadow-md transition-all relative overflow-hidden group">
+<div class="absolute top-0 right-0 w-16 h-16 bg-surface-container-high/50 rounded-bl-3xl flex items-start justify-end p-3 text-secondary font-bold font-price-headline">
+            02
+          </div>
+<div>
+<div class="w-12 h-12 rounded-xl bg-secondary-container text-on-secondary-container flex items-center justify-center mb-space-sm">
+<span class="material-symbols-outlined text-2xl">texture</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-primary font-semibold">Saffron Cloth Swaddling</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-2">
+              Every deity murti and consecrated metalwork is lovingly hand-wrapped in auspicious saffron-tinted unbleached cotton to prevent scratch abrasions during international transit.
+            </p>
+</div>
+<div class="mt-space-md pt-space-xs text-[11px] font-eyebrow-accent uppercase tracking-wider text-secondary">
+            Touch-Safe Sacred Cloth
+          </div>
+</div>
+<!-- Step 3 -->
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex flex-col justify-between hover:shadow-md transition-all relative overflow-hidden group">
+<div class="absolute top-0 right-0 w-16 h-16 bg-surface-container-high/50 rounded-bl-3xl flex items-start justify-end p-3 text-secondary font-bold font-price-headline">
+            03
+          </div>
+<div>
+<div class="w-12 h-12 rounded-xl bg-primary-fixed/40 text-primary flex items-center justify-center mb-space-sm">
+<span class="material-symbols-outlined text-2xl">eco</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-primary font-semibold">Zero-Plastic Honeycomb Shield</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-2">
+              We reject cheap petrochemical bubble wrap. Heavy brass items are encased in multi-layered, shock-absorbing Geami paper cushioning and sturdy recyclable rigid outer boxes.
+            </p>
+</div>
+<div class="mt-space-md pt-space-xs text-[11px] font-eyebrow-accent uppercase tracking-wider text-secondary">
+            100% Biodegradable Transit
+          </div>
+</div>
+<!-- Step 4 -->
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex flex-col justify-between hover:shadow-md transition-all relative overflow-hidden group">
+<div class="absolute top-0 right-0 w-16 h-16 bg-surface-container-high/50 rounded-bl-3xl flex items-start justify-end p-3 text-secondary font-bold font-price-headline">
+            04
+          </div>
+<div>
+<div class="w-12 h-12 rounded-xl bg-secondary-fixed/50 text-secondary flex items-center justify-center mb-space-sm">
+<span class="material-symbols-outlined text-2xl">card_giftcard</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-primary font-semibold">Devotee Unboxing Blessings</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-2">
+              Each package arrives accompanied by an authentic Tirupati-consecrated prasadam packet, an energizing unboxing stotra, and a certificate of temple authenticity.
+            </p>
+</div>
+<div class="mt-space-md pt-space-xs text-[11px] font-eyebrow-accent uppercase tracking-wider text-secondary">
+            Temple Prasadam Included
+          </div>
+</div>
+</div>
+<!-- Feature Split Banner inside Section 2 -->
+<div class="mt-space-xl bg-surface-container-lowest rounded-xl shadow-sm overflow-hidden grid grid-cols-1 lg:grid-cols-12 items-center">
+<div class="lg:col-span-7 p-space-xl flex flex-col gap-space-sm">
+<span class="font-eyebrow-accent text-eyebrow-accent text-secondary uppercase tracking-widest">FRAGILE BRASS &amp; CLAY IDOLS</span>
+<h3 class="font-headline-md text-headline-md text-primary font-serif">Double-Casket Boxing for Murtis over 20cm</h3>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+            For sacred deities weighing more than 2kg or exceeding 20cm in height (such as Lord Nataraja or Brihadeeswarar bronze replicas), our logistics craftsmen utilize custom internal wood-reinforced skeletal frames to protect intricate mudras, tridents, and prabhavalis from courier vibration.
+          </p>
+<div class="flex items-center gap-space-md pt-2">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-xl">format_image_left</span>
+<span class="font-label-button text-label-button text-on-surface">Transit Insurance Included</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-xl">autorenew</span>
+<span class="font-label-button text-label-button text-on-surface">Instant Free Replacements</span>
+</div>
+</div>
+</div>
+<div class="lg:col-span-5 h-full min-h-[260px] bg-cover bg-center" data-alt="Artisanal brass idol of Lord Ganesha wrapped carefully in soft orange saffron cloth nestled inside eco-friendly corrugated packing box with sacred tulsi leaves on ivory cloth." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCz46RB4eTU8qQFtxHgQjAlShuux3J3WBH82xVCAsv8rAm3UgCL8QHSZbHEV1yQcYx9HOQ5MU8LR7boiZu-fUm_l_C2mKAoi8gs4vOL0jaSeRQtzHaxvn72qblB3riiWJpkkE-oNVo6lvIvOzpUVb6aM5gbQx5Pa3ydJWbExzE937n5LzlS_WnRo6LJxJRGVklWS0gH_TOa-PCqAc9niPGeGQsjSkSMkeXyDHNw5CsG')">
+</div>
+</div>
+</div>
+</section>
+<!-- Section 3: Returns, Replacements & Sacred Restitution Protocol -->
+<section class="w-full py-space-2xl bg-surface">
+<div class="max-w-[1320px] mx-auto px-gutter">
+<div class="max-w-3xl mb-space-xl">
+<span class="font-eyebrow-accent text-eyebrow-accent text-secondary uppercase tracking-widest">TRANSPARENT REASSURANCE</span>
+<h2 class="font-headline-lg text-headline-lg text-primary font-serif mt-1">Our 14-Day Returns &amp; Exchange Policy</h2>
+<p class="font-body-md text-body-md text-on-surface-variant mt-2 leading-relaxed">
+          We want your home altar and ritual practice to be filled with deep joy and reverence. If a selected item is not suited to your sanctum, our respectful restitution process ensures prompt resolutions.
+        </p>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-space-lg">
+<!-- Card 1: What Can Be Returned -->
+<div class="bg-surface-container-lowest p-space-lg rounded-xl shadow-sm flex flex-col justify-between">
+<div>
+<div class="w-12 h-12 rounded-xl bg-primary-fixed/40 text-primary flex items-center justify-center mb-space-sm">
+<span class="material-symbols-outlined text-2xl">check_circle</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-primary font-semibold">Eligible Items</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-2 mb-4">
+              Returnable within 14 calendar days of documented carrier delivery:
+            </p>
+<ul class="space-y-2.5 font-body-sm text-body-sm text-on-surface">
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined text-secondary text-sm mt-0.5">check</span>
+<span>Unlit brass &amp; silver lamps (Kuthuvilakku, Kamakshi Vilakku, Aarti)</span>
+</li>
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined text-secondary text-sm mt-0.5">check</span>
+<span>Unblemished brass, bronze, and marble idols in original presentation box</span>
+</li>
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined text-secondary text-sm mt-0.5">check</span>
+<span>Vedic literature, stotra scriptures, and children's mythological books</span>
+</li>
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined text-secondary text-sm mt-0.5">check</span>
+<span>Unopened classical Bharatanatyam jewellery and costume textiles</span>
+</li>
+</ul>
+</div>
+<div class="mt-6 pt-4 bg-surface-container-low p-3 rounded-lg text-body-sm text-on-surface-variant">
+            Full refund issued to original payment method within 3–5 working days of receipt.
+          </div>
+</div>
+<!-- Card 2: Sacred Item Protocol (Our Unique Cultural Differentiator) -->
+<div class="bg-surface-container-lowest p-space-lg rounded-xl shadow-sm flex flex-col justify-between">
+<div>
+<div class="w-12 h-12 rounded-xl bg-secondary-container text-on-secondary-container flex items-center justify-center mb-space-sm">
+<span class="material-symbols-outlined text-2xl">synagogue</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-primary font-semibold">Sacred Murti Sanctity Rule</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-2 mb-4">
+              How we respectfully handle damaged idols in spiritual compliance:
+            </p>
+<div class="space-y-3 font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+<p>
+                In strict adherence to Shastric tradition, <strong class="text-primary font-semibold">GIRI UK never discards broken or transit-damaged sanctified murtis into standard commercial recycling.</strong>
+</p>
+<p>
+                If your murti arrives fractured, please do not discard it. We arrange an immediate free replacement and provide a pre-paid courier pouch to transfer the damaged murti to our Wembley Mandir Custody for traditional ritual immersion (Jal Samadhi) or respectful consecration disposal.
+              </p>
+</div>
+</div>
+<div class="mt-6 p-3 bg-secondary-fixed/40 rounded-lg text-body-sm text-on-secondary-fixed font-semibold flex items-center gap-2">
+<span class="material-symbols-outlined text-base">temple_buddhist</span>
+<span>Zero Desecration Guarantee</span>
+</div>
+</div>
+<!-- Card 3: Non-Returnable Consumables -->
+<div class="bg-surface-container-lowest p-space-lg rounded-xl shadow-sm flex flex-col justify-between">
+<div>
+<div class="w-12 h-12 rounded-xl bg-surface-container-high text-on-surface-variant flex items-center justify-center mb-space-sm">
+<span class="material-symbols-outlined text-2xl">block</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-primary font-semibold">Non-Returnable Puja Goods</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-2 mb-4">
+              To uphold sanctified ritual purity, we cannot accept returns on:
+            </p>
+<ul class="space-y-2.5 font-body-sm text-body-sm text-on-surface">
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined text-error text-sm mt-0.5">close</span>
+<span>Unsealed Kumkum, Vibhuti, Sandalwood pastes &amp; Chandan rolls</span>
+</li>
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined text-error text-sm mt-0.5">close</span>
+<span>Natural Pachai Karpooram (Camphor) and cold-pressed Deepam sesame oils</span>
+</li>
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined text-error text-sm mt-0.5">close</span>
+<span>Sacred threads (Yagnopaveetam / Poonal) once outer envelope seal is broken</span>
+</li>
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined text-error text-sm mt-0.5">close</span>
+<span>Customised or specially ordained homam samagri sets</span>
+</li>
+</ul>
+</div>
+<div class="mt-6 pt-4 bg-surface-container-low p-3 rounded-lg text-body-sm text-on-surface-variant">
+            If any item arrives damaged or leaked, a photo qualifies you for immediate re-dispatch.
+          </div>
+</div>
+</div>
+<!-- How to Initiate a Return: 3 Simple Steps -->
+<div class="mt-space-xl p-space-xl bg-surface-container-low rounded-xl">
+<h3 class="font-headline-md text-headline-md text-primary font-serif text-center mb-space-md">Initiating Your Return in 3 Intuitive Steps</h3>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-space-lg relative">
+<div class="flex flex-col items-center text-center">
+<div class="w-14 h-14 rounded-full bg-primary text-on-primary font-bold text-xl flex items-center justify-center mb-space-sm shadow-sm">
+              1
+            </div>
+<h4 class="font-label-button text-label-button text-primary">Access Online Returns Portal</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1.5 max-w-xs">
+              Input your 6-digit GIRI order number (e.g. #GUK-8842) and UK postcode via our automated self-serve returns portal.
+            </p>
+</div>
+<div class="flex flex-col items-center text-center">
+<div class="w-14 h-14 rounded-full bg-primary text-on-primary font-bold text-xl flex items-center justify-center mb-space-sm shadow-sm">
+              2
+            </div>
+<h4 class="font-label-button text-label-button text-primary">Obtain Paperless QR Code</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1.5 max-w-xs">
+              No printer required. Present the generated Royal Mail digital QR code at any Post Office counter or Customer Service Point.
+            </p>
+</div>
+<div class="flex flex-col items-center text-center">
+<div class="w-14 h-14 rounded-full bg-primary text-on-primary font-bold text-xl flex items-center justify-center mb-space-sm shadow-sm">
+              3
+            </div>
+<h4 class="font-label-button text-label-button text-primary">Inspection &amp; Speedy Restitution</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1.5 max-w-xs">
+              Upon reception at our Wembley warehouse, our inspection team verifies condition and processes your full reimbursement within 72 hours.
+            </p>
+</div>
+</div>
+<div class="mt-space-lg flex justify-center">
+<a class="px-6 py-3 rounded-full bg-primary text-on-primary font-label-button text-label-button hover:bg-primary-container transition-all flex items-center gap-2 shadow-sm" href="#">
+<span>Launch Paperless Returns Portal</span>
+<span class="material-symbols-outlined text-base">arrow_forward</span>
+</a>
+</div>
+</div>
+</div>
+</section>
+<!-- Section 4: Interactive Frequently Asked Questions (FAQ Accordion) -->
+<section class="w-full py-space-2xl bg-surface-container-low">
+<div class="max-w-[1020px] mx-auto px-gutter">
+<div class="text-center mb-space-xl">
+<span class="font-eyebrow-accent text-eyebrow-accent text-secondary uppercase tracking-widest">GOT QUESTIONS?</span>
+<h2 class="font-headline-lg text-headline-lg text-primary font-serif mt-1">Frequently Asked Delivery &amp; Returns Inquiries</h2>
+<p class="font-body-md text-body-md text-on-surface-variant mt-2">Everything you need to know about receiving and returning your devotional treasures.</p>
+</div>
+<div class="space-y-4">
+<!-- FAQ item 1 -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm">
+<details class="group [&amp;_summary::-webkit-details-marker]:hidden" open="">
+<summary class="flex items-center justify-between cursor-pointer list-none">
+<span class="font-headline-sm text-headline-sm text-primary font-medium">What happens if my Brass Idol or Diya arrives damaged?</span>
+<span class="material-symbols-outlined text-secondary transition-transform group-open:rotate-180">expand_more</span>
+</summary>
+<div class="mt-4 pt-3 text-body-md text-on-surface-variant leading-relaxed font-body-md">
+<p>
+                In the rare event of transit shock or damage, photograph the item alongside its packaging and email us at <strong class="text-primary">support@giriuk.com</strong> or WhatsApp our London helpline at <strong class="text-primary">+44 20 8903 8920</strong> within 48 hours. We dispatch an immediate priority replacement free of charge and provide instructions for the respectful surrender of the broken deity under our sacred protocol.
+              </p>
+</div>
+</details>
+</div>
+<!-- FAQ item 2 -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm">
+<details class="group [&amp;_summary::-webkit-details-marker]:hidden">
+<summary class="flex items-center justify-between cursor-pointer list-none">
+<span class="font-headline-sm text-headline-sm text-primary font-medium">Do I need to pay customs duties or import taxes in the EU?</span>
+<span class="material-symbols-outlined text-secondary transition-transform group-open:rotate-180">expand_more</span>
+</summary>
+<div class="mt-4 pt-3 text-body-md text-on-surface-variant leading-relaxed font-body-md">
+<p>
+                No. For all European orders under €150 delivered to Germany, France, Netherlands, Ireland, and across the EU, VAT is settled at checkout via our EU IOSS registration. You will not face unexpected courier clearance fees or domestic post office holding taxes when your parcel arrives.
+              </p>
+</div>
+</details>
+</div>
+<!-- FAQ item 3 -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm">
+<details class="group [&amp;_summary::-webkit-details-marker]:hidden">
+<summary class="flex items-center justify-between cursor-pointer list-none">
+<span class="font-headline-sm text-headline-sm text-primary font-medium">Can I collect my order in person from your Wembley hub?</span>
+<span class="material-symbols-outlined text-secondary transition-transform group-open:rotate-180">expand_more</span>
+</summary>
+<div class="mt-4 pt-3 text-body-md text-on-surface-variant leading-relaxed font-body-md">
+<p>
+                Yes! We offer a complimentary "Click &amp; Collect" service at our Wembley Cultural Sanctorum (HA9 7ET). Simply choose 'Collect at Wembley' at checkout. Orders placed before 1:00 PM are typically ready for collection on the same afternoon between 3:00 PM and 6:30 PM.
+              </p>
+</div>
+</details>
+</div>
+<!-- FAQ item 4 -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm">
+<details class="group [&amp;_summary::-webkit-details-marker]:hidden">
+<summary class="flex items-center justify-between cursor-pointer list-none">
+<span class="font-headline-sm text-headline-sm text-primary font-medium">How do I track my shipment once it has left your logistics center?</span>
+<span class="material-symbols-outlined text-secondary transition-transform group-open:rotate-180">expand_more</span>
+</summary>
+<div class="mt-4 pt-3 text-body-md text-on-surface-variant leading-relaxed font-body-md">
+<p>
+                As soon as your shipment is scanned by Royal Mail or DPD, you will receive an automatic dispatch notification containing a live 13-character tracking number (e.g. GB293848209RM) and an estimated 2-hour delivery window. You can also monitor your parcel anytime through our top header "Track Order" link.
+              </p>
+</div>
+</details>
+</div>
+<!-- FAQ item 5 -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm">
+<details class="group [&amp;_summary::-webkit-details-marker]:hidden">
+<summary class="flex items-center justify-between cursor-pointer list-none">
+<span class="font-headline-sm text-headline-sm text-primary font-medium">Are books and dance jewellery eligible for return if sizing is wrong?</span>
+<span class="material-symbols-outlined text-secondary transition-transform group-open:rotate-180">expand_more</span>
+</summary>
+<div class="mt-4 pt-3 text-body-md text-on-surface-variant leading-relaxed font-body-md">
+<p>
+                Absolutely. Books with crisp, uncreased spines and Bharatanatyam dance ornaments (belts, ghungroos, temple necklaces) can be returned within 14 days, provided they have not been worn for public performances and retain all original velvet tags and pouches.
+              </p>
+</div>
+</details>
+</div>
+</div>
+</div>
+</section>
+<!-- Section 5: Urgent Delivery Assistance & London Seva Desk Banner -->
+<section class="w-full py-space-xl bg-surface">
+<div class="max-w-[1320px] mx-auto px-gutter">
+<div class="bg-gradient-to-r from-primary via-primary-container to-primary text-on-primary rounded-2xl p-space-xl relative overflow-hidden shadow-xl">
+<!-- Subtle decorative mandala overlay backdrop -->
+<div class="absolute -right-16 -bottom-16 w-80 h-80 rounded-full bg-secondary/10 pointer-events-none blur-2xl"></div>
+<div class="relative z-10 flex flex-col lg:flex-row items-center justify-between gap-space-lg">
+<div class="max-w-2xl text-center lg:text-left">
+<div class="inline-flex items-center gap-2 bg-secondary/30 px-3 py-1 rounded-full text-secondary-fixed text-[11px] font-eyebrow-accent uppercase tracking-widest mb-3">
+<span class="material-symbols-outlined text-xs">support_agent</span>
+<span>Direct Temple Seva Assistance</span>
+</div>
+<h3 class="font-headline-md text-headline-md font-serif font-bold text-on-primary">Need Muhurtham or Festival Delivery Guarantees?</h3>
+<p class="font-body-md text-body-md text-surface-container-highest mt-2 leading-relaxed">
+              Preparing for an auspicious Grihapravesham, wedding ritual, or urgent festival puja? Speak directly with our Wembley logistics co-ordinators for expedited courier solutions and special vehicle dispatch within Greater London.
+            </p>
+</div>
+<div class="flex flex-col sm:flex-row items-center gap-space-sm shrink-0 w-full sm:w-auto">
+<a class="w-full sm:w-auto px-6 py-3.5 rounded-full bg-secondary text-on-secondary font-label-button text-label-button hover:bg-secondary-fixed hover:text-on-secondary-fixed transition-colors flex items-center justify-center gap-2 shadow-md" href="tel:+442089038920">
+<span class="material-symbols-outlined text-lg">call</span>
+<span>+44 20 8903 8920</span>
+</a>
+<a class="w-full sm:w-auto px-6 py-3.5 rounded-full bg-surface-container-lowest/15 backdrop-blur-sm text-on-primary font-label-button text-label-button hover:bg-surface-container-lowest/25 transition-colors flex items-center justify-center gap-2" href="https://wa.me/442089038920" target="_blank">
+<span class="material-symbols-outlined text-lg">chat</span>
+<span>WhatsApp Seva Team</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+</section>
+</div>
+<script>
+  // Simple micro-interaction for FAQ accordions ensuring smooth toggling
+  document.querySelectorAll('details').forEach((el) => {
+    el.addEventListener('toggle', () => {
+      if (el.open) {
+        document.querySelectorAll('details').forEach((other) => {
+          if (other !== el && other.open) {
+            other.removeAttribute('open');
+          }
+        });
+      }
+    });
+  });
+</script></main><section class="w-full bg-surface-container border-y border-surface-container-highest py-6"><div class="max-w-[1320px] mx-auto px-gutter"><div class="grid grid-cols-2 md:grid-cols-5 gap-4 items-center"><div class="flex items-center gap-3 p-2"><div class="w-10 h-10 rounded-full bg-primary-container/10 flex items-center justify-center shrink-0"><span class="material-symbols-outlined text-primary text-xl">verified</span></div><div><p class="font-label-nav text-label-nav text-on-surface">100% Authentic</p><p class="font-body-sm text-[12px] text-on-surface-variant">Sourced from sacred sanctums</p></div></div><div class="flex items-center gap-3 p-2"><div class="w-10 h-10 rounded-full bg-primary-container/10 flex items-center justify-center shrink-0"><span class="material-symbols-outlined text-primary text-xl">local_shipping</span></div><div><p class="font-label-nav text-label-nav text-on-surface">Express UK Delivery</p><p class="font-body-sm text-[12px] text-on-surface-variant">Free dispatch on £50+</p></div></div><div class="flex items-center gap-3 p-2"><div class="w-10 h-10 rounded-full bg-primary-container/10 flex items-center justify-center shrink-0"><span class="material-symbols-outlined text-primary text-xl">inventory_2</span></div><div><p class="font-label-nav text-label-nav text-on-surface">Careful Packaging</p><p class="font-body-sm text-[12px] text-on-surface-variant">Transit-safe sacred handling</p></div></div><div class="flex items-center gap-3 p-2"><div class="w-10 h-10 rounded-full bg-primary-container/10 flex items-center justify-center shrink-0"><span class="material-symbols-outlined text-primary text-xl">lock</span></div><div><p class="font-label-nav text-label-nav text-on-surface">Secure Payments</p><p class="font-body-sm text-[12px] text-on-surface-variant">256-bit encrypted checkout</p></div></div><div class="flex items-center gap-3 p-2 col-span-2 md:col-span-1"><div class="w-10 h-10 rounded-full bg-primary-container/10 flex items-center justify-center shrink-0"><span class="material-symbols-outlined text-primary text-xl">support_agent</span></div><div><p class="font-label-nav text-label-nav text-on-surface">Dedicated Support</p><p class="font-body-sm text-[12px] text-on-surface-variant">UK &amp; EU assistance desk</p></div></div></div></div></section><footer class="w-full bg-primary text-on-primary"><div class="max-w-[1320px] mx-auto px-gutter pt-space-2xl pb-space-xl"><div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-space-xl"><div class="lg:col-span-2 flex flex-col gap-space-md"><div class="flex flex-col"><div class="flex items-center gap-space-xs"><span class="font-headline-lg text-headline-lg tracking-tight text-on-primary font-bold leading-none">GIRI</span><span class="font-eyebrow-accent text-eyebrow-accent uppercase bg-secondary text-on-secondary px-1.5 py-0.5 rounded">UK</span></div><span class="font-eyebrow-accent text-eyebrow-accent tracking-widest uppercase text-secondary-fixed mt-1">In UK &amp; EU by SHIVAYAA</span></div><p class="font-body-md text-body-md text-surface-container-highest max-w-sm leading-relaxed">Authentic Indian cultural treasures, sacred Vedic literature, handcrafted brass murtis, and ritual puja essentials curated reverently for homes across the UK and Europe.</p><div class="flex items-center gap-space-sm pt-space-xs"><a class="w-9 h-9 rounded-full bg-primary-container flex items-center justify-center text-secondary-fixed hover:bg-secondary hover:text-on-secondary transition-colors" href="#"><span class="material-symbols-outlined text-base">photo_camera</span></a><a class="w-9 h-9 rounded-full bg-primary-container flex items-center justify-center text-secondary-fixed hover:bg-secondary hover:text-on-secondary transition-colors" href="#"><span class="material-symbols-outlined text-base">share</span></a><a class="w-9 h-9 rounded-full bg-primary-container flex items-center justify-center text-secondary-fixed hover:bg-secondary hover:text-on-secondary transition-colors" href="#"><span class="material-symbols-outlined text-base">smart_display</span></a><a class="w-9 h-9 rounded-full bg-primary-container flex items-center justify-center text-secondary-fixed hover:bg-secondary hover:text-on-secondary transition-colors" href="#"><span class="material-symbols-outlined text-base">push_pin</span></a></div></div><div class="flex flex-col gap-space-sm"><span class="font-eyebrow-accent text-eyebrow-accent text-secondary-fixed uppercase tracking-wider mb-2">Shop Categories</span><a class="font-body-sm text-body-sm text-surface-container-highest hover:text-secondary-fixed transition-colors" data-path="festival-special" href="#">Festival Specials</a><a class="font-body-sm text-body-sm text-surface-container-highest hover:text-secondary-fixed transition-colors" data-path="puja" href="#">Puja Samagri</a><a class="font-body-sm text-body-sm text-surface-container-highest hover:text-secondary-fixed transition-colors" data-path="books" href="#">Sacred Books &amp; Stotras</a><a class="font-body-sm text-body-sm text-surface-container-highest hover:text-secondary-fixed transition-colors" data-path="idols-handicrafts" href="#">Brass Idols &amp; Diyas</a><a class="font-body-sm text-body-sm text-surface-container-highest hover:text-secondary-fixed transition-colors" data-path="dancewear-jewellery" href="#">Classical Dance Jewellery</a><a class="font-body-sm text-body-sm text-surface-container-highest hover:text-secondary-fixed transition-colors" data-path="textiles" href="#">Pure Silk &amp; Dhotis</a></div><div class="flex flex-col gap-space-sm"><span class="font-eyebrow-accent text-eyebrow-accent text-secondary-fixed uppercase tracking-wider mb-2">My Account &amp; Orders</span><a class="font-body-sm text-body-sm text-surface-container-highest hover:text-secondary-fixed transition-colors" data-path="giri-uk-customer-account-dashboard" href="#">Account Overview</a><a class="font-body-sm text-body-sm text-surface-container-highest hover:text-secondary-fixed transition-colors" data-path="giri-uk-customer-order-history" href="#">Past Orders &amp; Invoices</a><a class="font-body-sm text-body-sm text-surface-container-highest hover:text-secondary-fixed transition-colors" data-path="giri-uk-order-confirmation-thank-you" href="#">Track Consignment</a><a class="font-body-sm text-body-sm text-surface-container-highest hover:text-secondary-fixed transition-colors" data-path="shipping-policy" href="#">UK &amp; EU Shipping Rates</a><a class="font-body-sm text-body-sm text-surface-container-highest hover:text-secondary-fixed transition-colors" data-path="returns" href="#">Returns &amp; Exchanges</a><a class="font-body-sm text-body-sm text-surface-container-highest hover:text-secondary-fixed transition-colors" data-path="faqs" href="#">Help &amp; FAQs</a></div><div class="flex flex-col gap-space-md"><span class="font-eyebrow-accent text-eyebrow-accent text-secondary-fixed uppercase tracking-wider">Stay in Touch</span><p class="font-body-sm text-body-sm text-surface-container-highest">Subscribe for spiritual insights, festival muhurthams, and exclusive boutique previews.</p><form class="flex flex-col gap-space-xs"><div class="flex items-center rounded-full bg-primary-container p-1 shadow-[0_2px_8px_rgba(0,0,0,0.12)]"><input class="w-full px-4 py-2 bg-transparent text-on-primary placeholder:text-surface-variant font-body-sm text-body-sm focus:outline-none" placeholder="Your email address" type="email"/><button class="px-4 py-2 rounded-full bg-secondary text-on-secondary font-label-button text-label-button hover:bg-secondary-fixed hover:text-on-secondary-fixed transition-colors shrink-0 flex items-center justify-center" type="button"><span class="material-symbols-outlined text-sm">arrow_forward</span></button></div></form><div class="flex items-center gap-space-xs text-secondary-fixed font-body-sm text-body-sm"><span class="material-symbols-outlined text-sm">verified</span><span>Authentic Heritage Guarantee</span></div></div></div><div class="mt-space-2xl pt-space-lg flex flex-col md:flex-row items-center justify-between gap-space-md bg-primary-container/40 p-space-md rounded-xl"><div class="flex flex-col md:flex-row items-center gap-space-xs text-surface-container-highest font-body-sm text-body-sm text-center md:text-left"><span>In UK &amp; EU by SHIVAYAA</span><span class="hidden md:inline">|</span><span>© 2026 GIRI UK. All rights reserved.</span></div><div class="flex items-center gap-space-xs flex-wrap justify-center"><span class="px-2 py-1 bg-surface-container-lowest text-primary rounded font-label-button text-[10px] font-bold">VISA</span><span class="px-2 py-1 bg-surface-container-lowest text-primary rounded font-label-button text-[10px] font-bold">MASTERCARD</span><span class="px-2 py-1 bg-surface-container-lowest text-primary rounded font-label-button text-[10px] font-bold">MAESTRO</span><span class="px-2 py-1 bg-surface-container-lowest text-primary rounded font-label-button text-[10px] font-bold">AMEX</span><span class="px-2 py-1 bg-surface-container-lowest text-primary rounded font-label-button text-[10px] font-bold">APPLE PAY</span><span class="px-2 py-1 bg-surface-container-lowest text-primary rounded font-label-button text-[10px] font-bold">GOOGLE PAY</span></div></div></div></footer></body></html>

@@ -1,0 +1,6 @@
+{
+  "name": "GIRI UK – The Culture & Tradition of Bharat",
+  "description": "Premier UK & European online destination for traditional Indian devotional essentials, authentic brass idols, Vedic books, puja samagri, dancewear, and handloom textiles.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

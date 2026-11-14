@@ -1,0 +1,653 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_standard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&amp;family=Manrope:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "on-tertiary-fixed-variant": "#574500", "secondary-fixed": "#ffdea0", "inverse-on-surface": "#f3f0e9", "secondary": "#745b22", "on-primary-fixed-variant": "#174f46", "on-secondary-container": "#795f26", "on-primary-fixed": "#00201b", "primary-fixed-dim": "#9bd1c5", "secondary-fixed-dim": "#e4c27f", "on-tertiary-container": "#4f3e00", "surface-dim": "#dcdad3", "primary": "#00362f", "tertiary-fixed": "#ffe088", "surface-variant": "#e5e2db", "on-primary-container": "#88beb2", "surface-container-high": "#ebe8e1", "inverse-surface": "#31312c", "outline": "#707976", "on-error-container": "#93000a", "surface": "#fcf9f2", "surface-container-low": "#f6f3ec", "surface-container-lowest": "#ffffff", "surface-container-highest": "#e5e2db", "primary-fixed": "#b7eee1", "on-background": "#1c1c18", "on-surface": "#1c1c18", "primary-container": "#164e45", "background": "#fcf9f2", "tertiary-fixed-dim": "#e9c349", "tertiary-container": "#cca730", "on-secondary": "#ffffff", "secondary-container": "#ffdb96", "error": "#ba1a1a", "tertiary": "#735c00", "on-primary": "#ffffff", "surface-bright": "#fcf9f2", "error-container": "#ffdad6", "on-surface-variant": "#404946", "on-error": "#ffffff", "on-secondary-fixed": "#261900", "on-secondary-fixed-variant": "#5a430b", "on-tertiary-fixed": "#241a00", "on-tertiary": "#ffffff", "surface-tint": "#33675e", "surface-container": "#f0eee7", "outline-variant": "#bfc8c5", "inverse-primary": "#9bd1c5" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "space-lg": "1.5rem", "space-sm": "0.5rem", "margin-mobile": "1rem", "space-xl": "2.5rem", "space-2xl": "4rem", "space-md": "1rem", "gutter-mobile": "1rem", "margin": "3rem", "space-xs": "0.25rem", "gutter": "1.5rem" }, "fontFamily": { "label-button": ["Manrope"], "headline-lg-mobile": ["EB Garamond"], "body-md": ["Manrope"], "headline-sm": ["EB Garamond"], "price-headline": ["Manrope"], "label-nav": ["Manrope"], "headline-xl-mobile": ["EB Garamond"], "eyebrow-accent": ["Manrope"], "headline-md": ["EB Garamond"], "headline-lg": ["EB Garamond"], "body-lg": ["Manrope"], "headline-xl": ["EB Garamond"], "body-sm": ["Manrope"] }, "fontSize": { "label-button": ["13px", { "lineHeight": "18px", "letterSpacing": "0.02em", "fontWeight": "600" }], "headline-lg-mobile": ["28px", { "lineHeight": "36px", "letterSpacing": "-0.005em", "fontWeight": "500" }], "body-md": ["15px", { "lineHeight": "24px", "fontWeight": "400" }], "headline-sm": ["22px", { "lineHeight": "30px", "fontWeight": "600" }], "price-headline": ["18px", { "lineHeight": "24px", "letterSpacing": "-0.02em", "fontWeight": "700" }], "label-nav": ["14px", { "lineHeight": "20px", "fontWeight": "600" }], "headline-xl-mobile": ["36px", { "lineHeight": "44px", "letterSpacing": "-0.01em", "fontWeight": "500" }], "eyebrow-accent": ["11px", { "lineHeight": "16px", "letterSpacing": "0.14em", "fontWeight": "700" }], "headline-md": ["28px", { "lineHeight": "36px", "fontWeight": "600" }], "headline-lg": ["40px", { "lineHeight": "48px", "letterSpacing": "-0.01em", "fontWeight": "500" }], "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }], "headline-xl": ["56px", { "lineHeight": "64px", "letterSpacing": "-0.01em", "fontWeight": "500" }], "body-sm": ["13px", { "lineHeight": "20px", "fontWeight": "400" }] } } } };</script></head><body class="bg-background font-body-md text-on-surface antialiased"><header class="fixed top-0 left-0 right-0 z-50 bg-surface/95 backdrop-blur-md shadow-[0_4px_16px_-2px_rgba(22,78,69,0.06)]"><div class="bg-primary-container text-on-primary py-1 px-margin flex items-center justify-between font-label-button text-label-button"><div class="flex items-center gap-space-xs"><span class="material-symbols-outlined text-sm text-secondary-fixed">sell</span><span>Use Code <span class="text-secondary-fixed font-bold tracking-wider">GIRIUK2026</span> and Get 10% Off</span></div><div class="hidden md:flex items-center gap-space-xs text-on-primary-container"><span class="material-symbols-outlined text-sm text-secondary-fixed">local_shipping</span><span class="text-on-primary">Free UK Delivery on Orders Above £50</span></div><div class="flex items-center gap-space-md text-on-primary-container text-body-sm font-body-sm"><a class="hover:text-on-primary transition-colors" data-path="giri-uk-order-confirmation-thank-you" href="#">Track Order</a><span class="opacity-40">|</span><div class="flex items-center gap-space-xs"><span class="material-symbols-outlined text-sm">currency_pound</span><span>GBP (£)</span></div></div></div><div class="h-20 max-w-[1320px] mx-auto px-gutter flex items-center justify-between gap-space-lg"><div class="flex items-center gap-space-md shrink-0"><a class="flex flex-col text-inherit no-underline" data-path="festival-special" href="#"><div class="flex items-center gap-space-xs"><span class="font-headline-md text-headline-md tracking-tight text-primary font-bold leading-none">GIRI</span><span class="font-eyebrow-accent text-eyebrow-accent uppercase bg-secondary text-on-secondary px-1.5 py-0.5 rounded">UK</span></div><span class="font-eyebrow-accent text-[9px] tracking-widest uppercase text-secondary font-semibold mt-0.5">In UK &amp; EU by SHIVAYAA</span></a></div><div class="flex-1 max-w-2xl"><div class="relative flex items-center w-full"><span class="material-symbols-outlined absolute left-4 text-outline">search</span><input class="w-full pl-11 pr-4 py-2.5 rounded-full bg-surface-container-low text-on-surface placeholder:text-outline-variant font-body-sm text-body-sm focus:outline-none focus:bg-surface-container-lowest focus:ring-1 focus:ring-secondary transition-all shadow-[inset_0_1px_3px_rgba(0,0,0,0.04)]" placeholder="Search for Puja Items, Books, Idols, Jewellery..." type="text"/></div></div><div class="flex items-center gap-space-lg shrink-0"><div class="relative group"><a class="flex items-center gap-space-xs text-on-surface-variant hover:text-primary transition-colors font-label-nav text-label-nav" data-path="giri-uk-customer-account-dashboard" href="#"><img alt="Ananya S." class="w-7 h-7 rounded-full object-cover ring-1 ring-secondary-container" src="https://lh3.googleusercontent.com/aida/AEtjO1WtQs4tb94R3VtDclknX-e1_zNOt0cljTd_m9BOhgepQ4yXjLuCraAYnBFNNwdDA7LawqOg_nVorbI_VDA_TfET6KctKpscmsRs9L82ua3mP38e9fE25VqxOXi_TlTXpdiP3vDtYFcqI_iq_S5vBGo7UsYTzEv0XstgP2GPCfNrVh9Z1NR2PZcAFlA21UjwybKFkh4ru4dGEEBmlgCxQ7gNeXpo77nl5M8Lh1xREGNRngsl-VXxKKRycCS1"/><span class="hidden lg:inline">My Account (Ananya S.)</span><span class="material-symbols-outlined text-sm text-outline">expand_more</span></a><div class="absolute right-0 top-full mt-2 w-56 bg-surface-container-lowest rounded-xl shadow-[0_12px_28px_-4px_rgba(22,78,69,0.12)] p-2 hidden group-hover:flex flex-col z-50 border-t-2 border-secondary"><a class="px-3 py-2 rounded-lg text-body-sm text-on-surface hover:bg-surface-container-low hover:text-primary transition-colors flex items-center justify-between" data-path="giri-uk-customer-account-dashboard" href="#"><span>Account Dashboard</span><span class="material-symbols-outlined text-sm text-outline">dashboard</span></a><a class="px-3 py-2 rounded-lg text-body-sm text-on-surface hover:bg-surface-container-low hover:text-primary transition-colors flex items-center justify-between" data-path="giri-uk-customer-order-history" href="#"><span>Order History</span><span class="material-symbols-outlined text-sm text-outline">receipt_long</span></a><div class="h-px bg-surface-container-high my-1"></div><a class="px-3 py-2 rounded-lg text-body-sm text-on-surface hover:bg-surface-container-low hover:text-primary transition-colors flex items-center justify-between" data-path="giri-uk-sign-in-customer-login" href="#"><span>Sign Out</span><span class="material-symbols-outlined text-sm text-outline">logout</span></a></div></div><a class="flex items-center gap-space-xs text-on-surface-variant hover:text-primary transition-colors font-label-nav text-label-nav" data-path="wishlist" href="#"><span class="material-symbols-outlined text-xl">favorite</span><span class="hidden lg:inline">Wishlist</span></a><a class="flex items-center gap-space-sm text-on-surface-variant hover:text-primary transition-colors font-label-nav text-label-nav" data-path="cart" href="#"><div class="relative flex items-center justify-center"><span class="material-symbols-outlined text-2xl text-primary">shopping_bag</span><span class="absolute -top-1.5 -right-2 bg-secondary-container text-on-secondary-container font-price-headline text-[11px] font-bold w-5 h-5 rounded-full flex items-center justify-center">2</span></div><span class="hidden lg:inline font-price-headline text-price-headline text-primary">£48.50</span></a></div></div><div class="bg-surface-container-low shadow-[0_1px_4px_rgba(22,78,69,0.04)]"><div class="max-w-[1320px] mx-auto px-gutter"><nav class="flex items-center justify-between overflow-x-auto py-2.5 gap-space-md" data-active-classes="text-primary font-bold border-b-2 border-secondary"><a class="font-label-nav text-label-nav text-on-surface-variant hover:text-primary whitespace-nowrap transition-colors" data-path="festival-special" href="#">Festival Special</a><a class="font-label-nav text-label-nav text-on-surface-variant hover:text-primary whitespace-nowrap transition-colors" data-path="new-arrivals" href="#">New Arrivals</a><a class="font-label-nav text-label-nav text-on-surface-variant hover:text-primary whitespace-nowrap transition-colors" data-path="on-demand" href="#">On Demand</a><a class="font-label-nav text-label-nav text-on-surface-variant hover:text-primary whitespace-nowrap transition-colors" data-path="books" href="#">Books</a><a class="font-label-nav text-label-nav text-on-surface-variant hover:text-primary whitespace-nowrap transition-colors" data-path="puja" href="#">Puja</a><a class="font-label-nav text-label-nav text-on-surface-variant hover:text-primary whitespace-nowrap transition-colors" data-path="idols-handicrafts" href="#">Idols &amp; Handicrafts</a><a class="font-label-nav text-label-nav text-on-surface-variant hover:text-primary whitespace-nowrap transition-colors" data-path="dancewear-jewellery" href="#">Dancewear &amp; Jewellery</a><a class="font-label-nav text-label-nav text-on-surface-variant hover:text-primary whitespace-nowrap transition-colors" data-path="home-decor-gifts" href="#">Home Decor &amp; Gifts</a><a class="font-label-nav text-label-nav text-on-surface-variant hover:text-primary whitespace-nowrap transition-colors" data-path="textiles" href="#">Textiles</a></nav></div></div></header><main class="w-full pt-36 bg-surface min-h-[calc(100vh-144px)]"><div class="flex flex-col w-full">
+<!-- BREADCRUMBS & EDITORIAL HERO -->
+<section class="w-full bg-surface-container-low/60 pb-space-xl">
+<div class="max-w-[1320px] mx-auto px-gutter">
+<!-- Breadcrumb Bar -->
+<nav aria-label="Breadcrumb" class="py-space-md flex items-center gap-space-xs font-body-sm text-body-sm text-on-surface-variant">
+<a class="hover:text-primary transition-colors flex items-center gap-1" data-path="festival-special" href="#">
+<span class="material-symbols-outlined text-base">home</span>
+<span>Home</span>
+</a>
+<span class="material-symbols-outlined text-sm text-outline-variant">chevron_right</span>
+<span class="text-on-surface-variant">Customer Care</span>
+<span class="material-symbols-outlined text-sm text-outline-variant">chevron_right</span>
+<span class="text-primary font-semibold">Contact Us &amp; Wembley Sanctuary</span>
+</nav>
+<!-- Hero Introduction -->
+<div class="relative mt-2 p-space-xl md:p-space-2xl rounded-2xl bg-surface-container-lowest shadow-sm overflow-hidden">
+<div class="absolute -right-24 -top-24 w-96 h-96 rounded-full bg-secondary-container/20 blur-3xl pointer-events-none"></div>
+<div class="absolute left-1/3 -bottom-24 w-80 h-80 rounded-full bg-primary-fixed/20 blur-3xl pointer-events-none"></div>
+<div class="relative z-10 max-w-4xl flex flex-col gap-space-sm">
+<div class="inline-flex items-center gap-2 self-start px-3 py-1 rounded-full bg-secondary-fixed/50 text-on-secondary-fixed">
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">temple_hindu</span>
+<span class="font-eyebrow-accent text-eyebrow-accent uppercase tracking-widest">SACRED SEVA &amp; DEVOTEE ASSISTANCE • LONDON &amp; GREATER UK</span>
+</div>
+<h1 class="font-headline-xl text-headline-xl text-primary tracking-tight font-medium mt-1">
+            Connect with the GIRI UK Seva Desk &amp; Temple Sanctuary
+          </h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant leading-relaxed mt-2 max-w-3xl">
+            Whether you seek ritual guidance for an upcoming Grihapravesham, wish to inspect sacred temple vigrahams in person at our Wembley cultural sanctuary, or require rapid delivery coordination across the UK &amp; Europe, our devoted sevaks are here to assist.
+          </p>
+<div class="flex flex-wrap items-center gap-space-lg pt-space-sm font-body-sm text-body-sm text-on-surface">
+<div class="flex items-center gap-2">
+<span class="w-2.5 h-2.5 rounded-full bg-emerald-600 animate-pulse"></span>
+<span class="font-medium text-primary">Seva Desk Active Today</span>
+</div>
+<div class="text-outline-variant">•</div>
+<div class="flex items-center gap-1.5 text-on-surface-variant">
+<span class="material-symbols-outlined text-base text-secondary">schedule</span>
+<span>Avg Phone Pick-up: &lt; 45 Seconds</span>
+</div>
+<div class="text-outline-variant">•</div>
+<div class="flex items-center gap-1.5 text-on-surface-variant">
+<span class="material-symbols-outlined text-base text-secondary">storefront</span>
+<span>3 Mins from Wembley Central Station</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- 4 FAST DEVOTEE CONTACT CARDS -->
+<section class="w-full -mt-6 z-20">
+<div class="max-w-[1320px] mx-auto px-gutter">
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-space-md">
+<!-- Card 1: Telephone -->
+<div class="bg-surface-container-lowest p-space-lg rounded-xl shadow-sm hover:shadow-md transition-shadow flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-4">
+<div class="w-12 h-12 rounded-xl bg-primary-container/10 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-2xl" style="font-variation-settings: 'FILL' 1;">call</span>
+</div>
+<span class="font-eyebrow-accent text-eyebrow-accent text-secondary uppercase bg-secondary-fixed/30 px-2 py-0.5 rounded">Voice Help</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-primary mb-1">Direct UK Helpline</h3>
+<p class="font-price-headline text-price-headline text-secondary mb-3">+44 20 8903 8920</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+              Mon–Sat: 9:30 AM – 6:30 PM GMT<br/>
+              Sun &amp; Ekadashi: 10:00 AM – 3:00 PM GMT
+            </p>
+</div>
+<div class="pt-space-md mt-space-sm">
+<a class="w-full inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-full bg-primary text-on-primary font-label-button text-label-button hover:bg-primary-container transition-colors shadow-sm" href="tel:+442089038920">
+<span class="material-symbols-outlined text-sm">call</span>
+<span>Call London Helpline</span>
+</a>
+</div>
+</div>
+<!-- Card 2: WhatsApp -->
+<div class="bg-surface-container-lowest p-space-lg rounded-xl shadow-sm hover:shadow-md transition-shadow flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-4">
+<div class="w-12 h-12 rounded-xl bg-emerald-50 text-emerald-800 flex items-center justify-center">
+<span class="material-symbols-outlined text-2xl" style="font-variation-settings: 'FILL' 1;">chat</span>
+</div>
+<span class="font-eyebrow-accent text-eyebrow-accent text-emerald-800 uppercase bg-emerald-100 px-2 py-0.5 rounded">&lt; 15m Response</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-primary mb-1">WhatsApp Temple Advisor</h3>
+<p class="font-price-headline text-price-headline text-secondary mb-3">+44 7700 900821</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+              Real-time photos of brass vigrahams, muhurtham advice &amp; rapid dispatch updates.
+            </p>
+</div>
+<div class="pt-space-md mt-space-sm">
+<a class="w-full inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-full bg-emerald-800 text-white font-label-button text-label-button hover:bg-emerald-900 transition-colors shadow-sm" href="https://wa.me/447700900821" rel="noopener noreferrer" target="_blank">
+<span class="material-symbols-outlined text-sm">send</span>
+<span>Chat on WhatsApp</span>
+</a>
+</div>
+</div>
+<!-- Card 3: Email Inquiries -->
+<div class="bg-surface-container-lowest p-space-lg rounded-xl shadow-sm hover:shadow-md transition-shadow flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-4">
+<div class="w-12 h-12 rounded-xl bg-secondary-container/30 text-secondary flex items-center justify-center">
+<span class="material-symbols-outlined text-2xl" style="font-variation-settings: 'FILL' 1;">mail</span>
+</div>
+<span class="font-eyebrow-accent text-eyebrow-accent text-secondary uppercase bg-secondary-fixed/30 px-2 py-0.5 rounded">Sacred Desk</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-primary mb-1">Sacred Devotee Desk</h3>
+<p class="font-body-md text-body-md font-semibold text-secondary mb-2 truncate">care@giriuk.com</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+              Temple consort orders, bulk mandir needs, festival sponsorships &amp; custom murti casting inquiries.
+            </p>
+</div>
+<div class="pt-space-md mt-space-sm">
+<a class="w-full inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-full bg-surface-container text-primary font-label-button text-label-button hover:bg-surface-container-high transition-colors shadow-sm" href="mailto:care@giriuk.com">
+<span class="material-symbols-outlined text-sm">alternate_email</span>
+<span>Email Our Sevaks</span>
+</a>
+</div>
+</div>
+<!-- Card 4: Wembley Sanctuary -->
+<div class="bg-surface-container-lowest p-space-lg rounded-xl shadow-sm hover:shadow-md transition-shadow flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-4">
+<div class="w-12 h-12 rounded-xl bg-primary-fixed/40 text-primary flex items-center justify-center">
+<span class="material-symbols-outlined text-2xl" style="font-variation-settings: 'FILL' 1;">temple_buddhist</span>
+</div>
+<span class="font-eyebrow-accent text-eyebrow-accent text-primary uppercase bg-primary-fixed px-2 py-0.5 rounded">In-Person</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-primary mb-1">Wembley Sanctuary</h3>
+<p class="font-body-md text-body-md font-semibold text-on-surface mb-2">48 Ealing Road, HA0 4TL</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+              Walk-in collection, consecrated brass viewing, silk trial sanctum, and Vedic library reading.
+            </p>
+</div>
+<div class="pt-space-md mt-space-sm">
+<a class="w-full inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-full bg-secondary text-on-secondary font-label-button text-label-button hover:bg-secondary-fixed hover:text-on-secondary-fixed transition-colors shadow-sm" href="#sanctuary-hub">
+<span class="material-symbols-outlined text-sm">event_available</span>
+<span>Book Sanctuary Visit</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- TWO-COLUMN INTERACTIVE HUB -->
+<section class="w-full py-space-2xl" id="sanctuary-hub">
+<div class="max-w-[1320px] mx-auto px-gutter">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-xl items-start">
+<!-- LEFT COLUMN (60%): Interactive Devotee Inquiry Form -->
+<div class="lg:col-span-7 bg-surface-container-lowest p-space-xl md:p-space-2xl rounded-2xl shadow-sm">
+<div class="flex items-center gap-2 mb-2">
+<span class="material-symbols-outlined text-secondary text-xl">self_improvement</span>
+<span class="font-eyebrow-accent text-eyebrow-accent uppercase tracking-widest text-secondary">DEVOTEE INQUIRY &amp; CONSULTATION</span>
+</div>
+<h2 class="font-headline-lg text-headline-lg text-primary tracking-tight font-medium mb-2">
+            How May We Serve Your Spiritual Practice?
+          </h2>
+<p class="font-body-md text-body-md text-on-surface-variant mb-space-lg leading-relaxed">
+            Fill out the sacred inquiry form below and our knowledgeable team in Wembley will review your requirements with reverence and respond within one business day.
+          </p>
+<form class="space-y-5" id="sevaInquiryForm" onsubmit="event.preventDefault(); showFormConfirmation();">
+<!-- Full Name -->
+<div class="flex flex-col gap-1.5">
+<label class="font-label-nav text-label-nav text-on-surface" for="devoteeName">
+                Full Devotee Name <span class="text-error">*</span>
+</label>
+<div class="relative">
+<span class="material-symbols-outlined absolute left-3.5 top-1/2 -translate-y-1/2 text-outline text-lg">person</span>
+<input class="w-full pl-11 pr-4 py-3 rounded-lg bg-surface-container-low text-on-surface placeholder:text-outline-variant font-body-sm text-body-sm focus:outline-none focus:bg-surface-container-lowest focus:ring-2 focus:ring-secondary transition-all" id="devoteeName" placeholder="e.g. Smt. Radhika Sundaram" required="" type="text"/>
+</div>
+</div>
+<!-- Email & Phone (2 cols) -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-space-md">
+<div class="flex flex-col gap-1.5">
+<label class="font-label-nav text-label-nav text-on-surface" for="devoteeEmail">
+                  Email Address <span class="text-error">*</span>
+</label>
+<div class="relative">
+<span class="material-symbols-outlined absolute left-3.5 top-1/2 -translate-y-1/2 text-outline text-lg">mail</span>
+<input class="w-full pl-11 pr-4 py-3 rounded-lg bg-surface-container-low text-on-surface placeholder:text-outline-variant font-body-sm text-body-sm focus:outline-none focus:bg-surface-container-lowest focus:ring-2 focus:ring-secondary transition-all" id="devoteeEmail" placeholder="name@domain.co.uk" required="" type="email"/>
+</div>
+</div>
+<div class="flex flex-col gap-1.5">
+<label class="font-label-nav text-label-nav text-on-surface" for="devoteePhone">
+                  UK Contact / Mobile Number <span class="text-error">*</span>
+</label>
+<div class="relative">
+<span class="material-symbols-outlined absolute left-3.5 top-1/2 -translate-y-1/2 text-outline text-lg">call</span>
+<input class="w-full pl-11 pr-4 py-3 rounded-lg bg-surface-container-low text-on-surface placeholder:text-outline-variant font-body-sm text-body-sm focus:outline-none focus:bg-surface-container-lowest focus:ring-2 focus:ring-secondary transition-all" id="devoteePhone" placeholder="+44 7911 123456" required="" type="tel"/>
+</div>
+</div>
+</div>
+<!-- Inquiry Nature & Order Ref -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-space-md">
+<div class="flex flex-col gap-1.5">
+<label class="font-label-nav text-label-nav text-on-surface" for="inquiryType">
+                  Nature of Inquiry <span class="text-error">*</span>
+</label>
+<div class="relative">
+<span class="material-symbols-outlined absolute left-3.5 top-1/2 -translate-y-1/2 text-outline text-lg">category</span>
+<select class="w-full pl-11 pr-8 py-3 rounded-lg bg-surface-container-low text-on-surface font-body-sm text-body-sm focus:outline-none focus:bg-surface-container-lowest focus:ring-2 focus:ring-secondary transition-all appearance-none cursor-pointer" id="inquiryType" required="">
+<option disabled="" selected="" value="">Select category...</option>
+<option value="tracking">Order Status &amp; Tracking Assistance</option>
+<option value="vigraham">Temple &amp; Mandir Vigraham Commission (Custom Panchaloha)</option>
+<option value="festival">Festival Muhurtham &amp; Bulk Samagri (Deepavali / Navratri / Wedding)</option>
+<option value="dancewear">Classical Dancewear &amp; Temple Jewellery Sizing</option>
+<option value="scripture">Vedic Scriptures, Tamil Panchangam &amp; Sloka Translation</option>
+<option value="appointment">Wembley Sanctuary Private Appointment</option>
+<option value="other">Other Devotional Inquiry</option>
+</select>
+<span class="material-symbols-outlined absolute right-3 top-1/2 -translate-y-1/2 text-outline pointer-events-none text-base">unfold_more</span>
+</div>
+</div>
+<div class="flex flex-col gap-1.5">
+<label class="font-label-nav text-label-nav text-on-surface" for="orderRef">
+                  Order Reference <span class="text-outline text-xs font-normal">(Optional)</span>
+</label>
+<div class="relative">
+<span class="material-symbols-outlined absolute left-3.5 top-1/2 -translate-y-1/2 text-outline text-lg">receipt</span>
+<input class="w-full pl-11 pr-4 py-3 rounded-lg bg-surface-container-low text-on-surface placeholder:text-outline-variant font-body-sm text-body-sm focus:outline-none focus:bg-surface-container-lowest focus:ring-2 focus:ring-secondary transition-all" id="orderRef" placeholder="#GUK-2026-XXXXX" type="text"/>
+</div>
+</div>
+</div>
+<!-- Message Area -->
+<div class="flex flex-col gap-1.5">
+<label class="font-label-nav text-label-nav text-on-surface" for="devoteeMessage">
+                Ritual Requirements / Question Details <span class="text-error">*</span>
+</label>
+<textarea class="w-full p-3.5 rounded-lg bg-surface-container-low text-on-surface placeholder:text-outline-variant font-body-sm text-body-sm focus:outline-none focus:bg-surface-container-lowest focus:ring-2 focus:ring-secondary transition-all" id="devoteeMessage" placeholder="Please describe your puja requirements, temple dimensions, auspicious muhurtham dates, or items you wish to inspect..." required="" rows="4"></textarea>
+</div>
+<!-- Preferred Contact Method -->
+<div class="flex flex-col gap-2 pt-1">
+<label class="font-label-nav text-label-nav text-on-surface">Preferred Contact Method</label>
+<div class="flex flex-wrap gap-4 text-on-surface font-body-sm text-body-sm">
+<label class="flex items-center gap-2 cursor-pointer">
+<input checked="" class="accent-secondary" name="contactMethod" type="radio" value="whatsapp"/>
+<span>WhatsApp Chat</span>
+</label>
+<label class="flex items-center gap-2 cursor-pointer">
+<input class="accent-secondary" name="contactMethod" type="radio" value="phone"/>
+<span>Phone Call</span>
+</label>
+<label class="flex items-center gap-2 cursor-pointer">
+<input class="accent-secondary" name="contactMethod" type="radio" value="email"/>
+<span>Email Response</span>
+</label>
+</div>
+</div>
+<!-- Panchangam Newsletter Checkbox -->
+<div class="flex items-start gap-3 pt-2">
+<input checked="" class="mt-1 accent-secondary cursor-pointer" id="panchangamOptIn" type="checkbox"/>
+<label class="font-body-sm text-body-sm text-on-surface-variant cursor-pointer" for="panchangamOptIn">
+                Receive London GMT Panchangam alerts, auspicious festival tithis, and private sanctuary viewing invitations via email.
+              </label>
+</div>
+<!-- Submit Button & Trust Signal -->
+<div class="pt-4 flex flex-col sm:flex-row items-center justify-between gap-4">
+<button class="w-full sm:w-auto px-8 py-3.5 rounded-full bg-primary text-on-primary font-label-button text-label-button hover:bg-primary-container transition-all flex items-center justify-center gap-2 shadow-md" type="submit">
+<span>Send Sacred Inquiry</span>
+<span class="material-symbols-outlined text-base">arrow_forward</span>
+</button>
+<div class="flex items-center gap-2 text-on-surface-variant font-body-sm text-[12px]">
+<span class="material-symbols-outlined text-secondary text-base">verified_user</span>
+<span>Protected by 256-bit SSL encryption. We honour your privacy.</span>
+</div>
+</div>
+</form>
+<!-- Dynamic Success Notification (Hidden by default) -->
+<div class="hidden mt-6 p-4 rounded-xl bg-primary/10 text-primary flex items-start gap-3" id="formSuccessToast">
+<span class="material-symbols-outlined text-2xl text-primary" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<div>
+<p class="font-headline-sm text-headline-sm font-semibold">Om Namah Shivaya. Your message is received.</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">A GIRI sevak at Wembley will connect via your preferred contact channel shortly.</p>
+</div>
+</div>
+</div>
+<!-- RIGHT COLUMN (40%): Wembley Sanctuary Card & Visual Guide -->
+<div class="lg:col-span-5 flex flex-col gap-space-lg">
+<!-- Sanctuary Cultural Hub Card -->
+<div class="bg-primary text-on-primary p-space-xl rounded-2xl shadow-xl relative overflow-hidden">
+<div class="absolute -right-12 -top-12 w-64 h-64 rounded-full bg-secondary/20 blur-2xl pointer-events-none"></div>
+<div class="relative z-10 flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<span class="font-eyebrow-accent text-eyebrow-accent uppercase bg-secondary-fixed text-on-secondary-fixed px-2.5 py-1 rounded font-bold tracking-wider">
+                  SHIVAYAA CULTURAL HUB &amp; STOREFRONT
+                </span>
+<span class="flex items-center gap-1.5 text-secondary-fixed font-body-sm text-body-sm">
+<span class="w-2 h-2 rounded-full bg-secondary-fixed animate-ping"></span>
+<span>Open Now</span>
+</span>
+</div>
+<div>
+<h3 class="font-headline-lg text-headline-lg text-on-primary tracking-tight font-medium">
+                  Experience the Sanctum in Person
+                </h3>
+<p class="font-body-md text-body-md text-surface-container-highest mt-1">
+                  Immerse your senses in authentic temple fragrances, hand-chiseled bronze idols, and woven silk dhotis.
+                </p>
+</div>
+<!-- Sanctuary Image Placeholder -->
+<div class="relative rounded-xl overflow-hidden h-48 w-full shadow-inner">
+<img class="w-full h-full object-cover" data-alt="Warmly lit interior of the GIRI UK and Shivayaa temple sanctuary in Wembley London, showcasing handcrafted brass murtis of Lord Ganesha and Nataraja on teak wood altars, brass lamps with gentle golden diya glow, stacks of Vedic scriptures in Sanskrit and Tamil, luxurious gold and forest green atmosphere." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDQTurfvjp8oz53nZt-R0ndMkDTwtYMtoqR9dD38KHqYsaMUM4vx73q8jJ5z7UNA0dgTsptF7lncKyism3adnUi3F3CDTy6YqZUPuIox8RfqhFZSQQgi7k0nupvTl7OzUmfHQELXsTgv-n1Xx0ZX8hnDfmo0e0XTqhX8rvma02TH2v3Fx4byFuJKxDm3Op7R1qxwYvWByjJawWUyET2D2PFb72BK4sngH-7n0FgXQyQ"/>
+<div class="absolute bottom-2 left-2 bg-inverse-surface/80 backdrop-blur-md px-3 py-1 rounded-md text-[11px] text-surface font-body-sm flex items-center gap-1.5">
+<span class="material-symbols-outlined text-xs text-secondary-fixed">photo_camera</span>
+<span>Ealing Road Sanctuary, Wembley</span>
+</div>
+</div>
+<!-- Address & Landmark -->
+<div class="bg-primary-container/60 p-4 rounded-xl flex flex-col gap-2">
+<div class="flex items-start gap-3">
+<span class="material-symbols-outlined text-secondary-fixed text-xl shrink-0 mt-0.5">location_on</span>
+<div class="text-surface-container-highest font-body-sm text-body-sm">
+<p class="font-semibold text-on-primary">48 Ealing Road, Wembley, Greater London</p>
+<p>HA0 4TL, United Kingdom</p>
+<p class="text-secondary-fixed text-xs mt-1">3 mins walk from Wembley Central Station (Bakerloo Line &amp; Overground)</p>
+</div>
+</div>
+</div>
+<!-- Opening Hours -->
+<div>
+<div class="flex items-center gap-2 mb-2 text-secondary-fixed font-eyebrow-accent text-eyebrow-accent uppercase tracking-wider">
+<span class="material-symbols-outlined text-base">schedule</span>
+<span>Sanctuary Timings (London GMT)</span>
+</div>
+<div class="space-y-1.5 font-body-sm text-body-sm text-surface-container-highest">
+<div class="flex justify-between py-1 border-b border-primary-container">
+<span>Monday – Saturday:</span>
+<span class="font-semibold text-on-primary">09:30 – 18:30 GMT</span>
+</div>
+<div class="flex justify-between py-1 border-b border-primary-container">
+<span>Sunday &amp; Ekadashi Days:</span>
+<span class="font-semibold text-on-primary">10:00 – 15:00 GMT</span>
+</div>
+<div class="flex justify-between py-1 text-secondary-fixed">
+<span>Major Festivals (Diwali, Vinayaka Chaturthi):</span>
+<span class="font-semibold">Extended till 20:30 GMT</span>
+</div>
+</div>
+</div>
+<!-- Key Sanctuary Features -->
+<div class="bg-primary-container/40 p-4 rounded-xl">
+<p class="font-label-nav text-label-nav text-secondary-fixed mb-2 uppercase">Sanctuary Features</p>
+<ul class="space-y-1.5 font-body-sm text-body-sm text-surface-container-highest">
+<li class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary-fixed text-base">check_circle</span>
+<span>Over 1,500 consecrated brass, bronze &amp; black stone vigrahams</span>
+</li>
+<li class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary-fixed text-base">check_circle</span>
+<span>Private trial sanctum for Bharatanatyam dance costumes</span>
+</li>
+<li class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary-fixed text-base">check_circle</span>
+<span>Vedic scripture library &amp; bilingual stotra book lounge</span>
+</li>
+<li class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary-fixed text-base">check_circle</span>
+<span>Click-and-Collect counter for web orders (ready in 2 hrs)</span>
+</li>
+</ul>
+</div>
+<!-- Quick CTAs -->
+<div class="flex flex-col sm:flex-row gap-3 pt-2">
+<a class="flex-1 inline-flex items-center justify-center gap-2 px-4 py-3 rounded-full bg-secondary-fixed text-on-secondary-fixed font-label-button text-label-button hover:bg-secondary transition-colors" href="https://maps.google.com/?q=48+Ealing+Road+Wembley+HA0+4TL" rel="noopener noreferrer" target="_blank">
+<span class="material-symbols-outlined text-base">navigation</span>
+<span>Google Maps Directions ↗</span>
+</a>
+<button class="flex-1 inline-flex items-center justify-center gap-2 px-4 py-3 rounded-full bg-surface-container-lowest text-primary font-label-button text-label-button hover:bg-surface-container-high transition-colors" onclick="document.getElementById('inquiryType').value='appointment'; document.getElementById('devoteeName').focus();" type="button">
+<span class="material-symbols-outlined text-base">calendar_month</span>
+<span>Book 1-on-1 Consultation</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Transit & Parking Guidance Panel -->
+<div class="bg-surface-container-lowest p-space-lg rounded-2xl shadow-sm flex flex-col gap-space-sm">
+<h4 class="font-headline-sm text-headline-sm text-primary flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary">commute</span>
+<span>Getting Here &amp; Parking</span>
+</h4>
+<div class="space-y-3 font-body-sm text-body-sm text-on-surface-variant">
+<div class="flex items-start gap-2.5">
+<span class="material-symbols-outlined text-primary text-lg mt-0.5">subway</span>
+<div>
+<strong class="text-on-surface">London Underground &amp; Rail:</strong>
+<p>Wembley Central Station is a 300m walk (Bakerloo line &amp; London Overground Watford Junction route).</p>
+</div>
+</div>
+<div class="flex items-start gap-2.5">
+<span class="material-symbols-outlined text-primary text-lg mt-0.5">directions_bus</span>
+<div>
+<strong class="text-on-surface">Bus Routes:</strong>
+<p>Buses 79, 83, 204, 297, and 483 stop directly adjacent to Ealing Road Mandir.</p>
+</div>
+</div>
+<div class="flex items-start gap-2.5">
+<span class="material-symbols-outlined text-primary text-lg mt-0.5">local_parking</span>
+<div>
+<strong class="text-on-surface">Customer Parking:</strong>
+<p>Dedicated customer loading bays behind sanctuary for heavy brass murtis, plus Montrose Crescent Car Park (2 mins walk).</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- STORE LOCATOR & AFFILIATED MANDIR HUBS SECTION -->
+<section class="w-full bg-surface-container-low py-space-2xl">
+<div class="max-w-[1320px] mx-auto px-gutter">
+<!-- Section Header -->
+<div class="max-w-3xl mb-space-xl">
+<div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-surface-container-highest text-on-surface-variant mb-2">
+<span class="material-symbols-outlined text-sm text-secondary">hub</span>
+<span class="font-eyebrow-accent text-eyebrow-accent uppercase tracking-widest">NETWORK &amp; FULFILMENT SANCTUARIES</span>
+</div>
+<h2 class="font-headline-lg text-headline-lg text-primary tracking-tight font-medium">
+          GIRI UK Collection Points &amp; Temple Partner Desks
+        </h2>
+<p class="font-body-md text-body-md text-on-surface-variant mt-2 leading-relaxed">
+          Conveniently collect festival samagri, Panchangam editions, or consult with affiliated sevaks across key UK diaspora centres.
+        </p>
+</div>
+<!-- 3 Location Cards Grid -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-space-lg">
+<!-- Location 1: Wembley Flagship -->
+<div class="bg-surface-container-lowest rounded-2xl p-space-lg shadow-sm hover:shadow-md transition-all flex flex-col justify-between border-t-4 border-secondary">
+<div class="space-y-4">
+<div class="flex items-center justify-between">
+<span class="px-2.5 py-1 rounded-full bg-emerald-100 text-emerald-800 font-label-button text-[11px] font-bold flex items-center gap-1.5">
+<span class="w-1.5 h-1.5 rounded-full bg-emerald-600"></span>
+<span>Open Today until 6:30 PM</span>
+</span>
+<span class="font-eyebrow-accent text-eyebrow-accent uppercase text-secondary">Primary Hub</span>
+</div>
+<div>
+<h3 class="font-headline-sm text-headline-sm text-primary mb-1">
+                Wembley Flagship &amp; Fulfilment Sanctuary
+              </h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">48 Ealing Road, Wembley, London HA0 4TL</p>
+<p class="font-body-sm text-body-sm text-secondary font-medium mt-1">Tel: +44 20 8903 8920</p>
+</div>
+<div class="h-px bg-surface-container"></div>
+<div>
+<p class="font-eyebrow-accent text-eyebrow-accent text-outline uppercase tracking-wider mb-2">Available Services</p>
+<div class="flex flex-wrap gap-1.5">
+<span class="px-2.5 py-1 bg-surface-container rounded-md font-body-sm text-[12px] text-on-surface">Full Retail Showroom</span>
+<span class="px-2.5 py-1 bg-surface-container rounded-md font-body-sm text-[12px] text-on-surface">Click &amp; Collect (2h)</span>
+<span class="px-2.5 py-1 bg-surface-container rounded-md font-body-sm text-[12px] text-on-surface">Custom Vigraham Sizing</span>
+<span class="px-2.5 py-1 bg-surface-container rounded-md font-body-sm text-[12px] text-on-surface">Urgent Courier Dispatch</span>
+</div>
+</div>
+</div>
+<div class="pt-6 mt-4">
+<a class="w-full inline-flex items-center justify-center gap-2 py-2.5 rounded-full bg-primary text-on-primary font-label-button text-label-button hover:bg-primary-container transition-colors" href="https://maps.google.com/?q=48+Ealing+Road+Wembley+HA0+4TL" rel="noopener noreferrer" target="_blank">
+<span class="material-symbols-outlined text-sm">directions</span>
+<span>Directions &amp; Hours</span>
+</a>
+</div>
+</div>
+<!-- Location 2: Neasden Temple Partner Desk -->
+<div class="bg-surface-container-lowest rounded-2xl p-space-lg shadow-sm hover:shadow-md transition-all flex flex-col justify-between">
+<div class="space-y-4">
+<div class="flex items-center justify-between">
+<span class="px-2.5 py-1 rounded-full bg-secondary-fixed/50 text-on-secondary-fixed font-label-button text-[11px] font-bold flex items-center gap-1.5">
+<span class="material-symbols-outlined text-xs">pin_drop</span>
+<span>Collect-Only Desk</span>
+</span>
+<span class="font-eyebrow-accent text-eyebrow-accent uppercase text-outline">Partner Point</span>
+</div>
+<div>
+<h3 class="font-headline-sm text-headline-sm text-primary mb-1">
+                Neasden &amp; Brentfield Road Collection Point
+              </h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Brentfield Road Mandir Area, London NW10 8HE</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant font-medium mt-1">Pre-order collection desk</p>
+</div>
+<div class="h-px bg-surface-container"></div>
+<div>
+<p class="font-eyebrow-accent text-eyebrow-accent text-outline uppercase tracking-wider mb-2">Available Services</p>
+<div class="flex flex-wrap gap-1.5">
+<span class="px-2.5 py-1 bg-surface-container rounded-md font-body-sm text-[12px] text-on-surface">Festival Samagri Pickup</span>
+<span class="px-2.5 py-1 bg-surface-container rounded-md font-body-sm text-[12px] text-on-surface">Panchangam Distribution</span>
+<span class="px-2.5 py-1 bg-surface-container rounded-md font-body-sm text-[12px] text-on-surface">Daily Temple Dhoop Stocks</span>
+</div>
+</div>
+</div>
+<div class="pt-6 mt-4">
+<a class="w-full inline-flex items-center justify-center gap-2 py-2.5 rounded-full bg-surface-container text-primary font-label-button text-label-button hover:bg-surface-container-high transition-colors" href="https://wa.me/447700900821?text=Neasden%20Collection%20Inquiry">
+<span class="material-symbols-outlined text-sm">chat</span>
+<span>Reserve at Neasden Desk</span>
+</a>
+</div>
+</div>
+<!-- Location 3: Leicester Diaspora Seva Counter -->
+<div class="bg-surface-container-lowest rounded-2xl p-space-lg shadow-sm hover:shadow-md transition-all flex flex-col justify-between">
+<div class="space-y-4">
+<div class="flex items-center justify-between">
+<span class="px-2.5 py-1 rounded-full bg-surface-container-high text-on-surface font-label-button text-[11px] font-bold flex items-center gap-1.5">
+<span class="material-symbols-outlined text-xs">store</span>
+<span>Open Mon–Sat 10:00 – 18:00</span>
+</span>
+<span class="font-eyebrow-accent text-eyebrow-accent uppercase text-outline">Midlands Hub</span>
+</div>
+<div>
+<h3 class="font-headline-sm text-headline-sm text-primary mb-1">
+                Leicester Diaspora Seva Counter
+              </h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Belgrave Road (Golden Mile), Leicester LE4 6AS</p>
+<p class="font-body-sm text-body-sm text-secondary font-medium mt-1">Tel: +44 116 266 8920</p>
+</div>
+<div class="h-px bg-surface-container"></div>
+<div>
+<p class="font-eyebrow-accent text-eyebrow-accent text-outline uppercase tracking-wider mb-2">Available Services</p>
+<div class="flex flex-wrap gap-1.5">
+<span class="px-2.5 py-1 bg-surface-container rounded-md font-body-sm text-[12px] text-on-surface">Navratri Golu Essentials</span>
+<span class="px-2.5 py-1 bg-surface-container rounded-md font-body-sm text-[12px] text-on-surface">Dancewear Fittings</span>
+<span class="px-2.5 py-1 bg-surface-container rounded-md font-body-sm text-[12px] text-on-surface">Festive Lighting &amp; Brass</span>
+</div>
+</div>
+</div>
+<div class="pt-6 mt-4">
+<a class="w-full inline-flex items-center justify-center gap-2 py-2.5 rounded-full bg-surface-container text-primary font-label-button text-label-button hover:bg-surface-container-high transition-colors" href="tel:+441162668920">
+<span class="material-symbols-outlined text-sm">call</span>
+<span>Contact Leicester Desk</span>
+</a>
+</div>
+</div>
+</div>
+<!-- Interactive Map Presentation Placeholder -->
+<div class="mt-space-xl p-space-md bg-surface-container-lowest rounded-2xl shadow-sm">
+<div class="flex items-center justify-between mb-3 px-2">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary">explore</span>
+<span class="font-headline-sm text-headline-sm text-primary">Sanctuary Map &amp; Transit Grid</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Greater London &amp; Wembley Area</span>
+</div>
+<div class="w-full h-80 rounded-xl bg-surface-container flex items-center justify-center text-on-surface-variant relative overflow-hidden" data-location="48 Ealing Road, Wembley, London HA0 4TL" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuANs-G3DjAQjw-nYrnRvfN0LGnzGLtA8O-TruS5yviOMTKEzf_aS5kL5C-LED_i-j0Y_7KbliaC3xVxViVY2bKk5EKcUa-zcb-mNSShJSs5Qr0mBhdvgqEmp7CgksbrAV8_d0IFhFtidQKiRcKEghwkcNAqOiuVVfvHUNGJtyZxGcOFlMtDA61lDxcmx62WP2IvlVsz2VQnmAzFFAfl6OyV96q8oREMFhrcxKtQAlk6')">
+<!-- Fallback Visual Badge if Map static placeholder is simulated -->
+<div class="bg-surface/90 backdrop-blur-md p-4 rounded-xl shadow-lg max-w-sm text-center mx-4">
+<span class="material-symbols-outlined text-3xl text-secondary mb-1">location_on</span>
+<p class="font-label-nav text-label-nav text-primary">GIRI UK Wembley Cultural Sanctuary</p>
+<p class="font-body-sm text-[12px] text-on-surface-variant mt-1">48 Ealing Road, Wembley HA0 4TL • 3 mins from Wembley Central</p>
+<a class="mt-3 inline-block px-4 py-1.5 rounded-full bg-primary text-on-primary font-label-button text-[11px]" href="https://maps.google.com/?q=48+Ealing+Road+Wembley+HA0+4TL" rel="noopener noreferrer" target="_blank">
+              Open in Google Maps
+            </a>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- REASSURANCE & FAQ QUICK STRIP -->
+<section class="w-full py-space-2xl bg-surface">
+<div class="max-w-[1320px] mx-auto px-gutter">
+<div class="text-center max-w-2xl mx-auto mb-space-xl">
+<span class="font-eyebrow-accent text-eyebrow-accent uppercase tracking-widest text-secondary">DEVOTEE CARE GUIDANCE</span>
+<h2 class="font-headline-lg text-headline-lg text-primary tracking-tight font-medium mt-1">
+          Frequently Answered Inquiries
+        </h2>
+<p class="font-body-md text-body-md text-on-surface-variant mt-2">
+          Everything you need to know about visiting the sanctuary, bespoke vigraham orders, and fast UK dispatch.
+        </p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-space-lg">
+<!-- FAQ 1 -->
+<div class="bg-surface-container-lowest p-space-lg rounded-2xl shadow-sm flex flex-col justify-between">
+<div>
+<div class="w-10 h-10 rounded-full bg-secondary-fixed/40 text-on-secondary-fixed flex items-center justify-center mb-4">
+<span class="material-symbols-outlined text-xl">visibility</span>
+</div>
+<h4 class="font-headline-sm text-headline-sm text-primary mb-2">
+              Can I inspect large brass murtis (over 20cm) before purchase?
+            </h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+              Yes, absolutely. Our Wembley Sanctuary maintains over 1,500 consecrated idols in brass, bronze, panchaloha, and black stone. You can book a 1-on-1 viewing appointment or request a detailed 360-degree video walkthrough via WhatsApp prior to dispatch.
+            </p>
+</div>
+<div class="pt-4 mt-2">
+<a class="font-label-button text-label-button text-secondary hover:text-primary transition-colors flex items-center gap-1" href="https://wa.me/447700900821?text=Hi%2C%20I%20would%20like%20to%20request%20photos%20of%20brass%20murtis">
+<span>Request WhatsApp Video Walkthrough</span>
+<span class="material-symbols-outlined text-sm">arrow_forward</span>
+</a>
+</div>
+</div>
+<!-- FAQ 2 -->
+<div class="bg-surface-container-lowest p-space-lg rounded-2xl shadow-sm flex flex-col justify-between">
+<div>
+<div class="w-10 h-10 rounded-full bg-primary-fixed/40 text-primary flex items-center justify-center mb-4">
+<span class="material-symbols-outlined text-xl">local_shipping</span>
+</div>
+<h4 class="font-headline-sm text-headline-sm text-primary mb-2">
+              Do you provide on-site delivery and temple sthapana guidance?
+            </h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+              For temple vigrahams and home altars exceeding 15kg, we offer specialized white-glove courier handling across mainland UK. Our senior sevaks can also coordinate with local London temple priests regarding sthapana muhurthams and shodasa upachara samagri.
+            </p>
+</div>
+<div class="pt-4 mt-2">
+<a class="font-label-button text-label-button text-secondary hover:text-primary transition-colors flex items-center gap-1" href="#sevaInquiryForm">
+<span>Request Sthapana Samagri List</span>
+<span class="material-symbols-outlined text-sm">arrow_forward</span>
+</a>
+</div>
+</div>
+<!-- FAQ 3 -->
+<div class="bg-surface-container-lowest p-space-lg rounded-2xl shadow-sm flex flex-col justify-between">
+<div>
+<div class="w-10 h-10 rounded-full bg-secondary-container/40 text-secondary flex items-center justify-center mb-4">
+<span class="material-symbols-outlined text-xl">shopping_basket</span>
+</div>
+<h4 class="font-headline-sm text-headline-sm text-primary mb-2">
+              How does Click &amp; Collect work from the Wembley Sanctuary?
+            </h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+              Simply choose “Collection at Wembley Sanctuary” during checkout. Most orders placed before 1:00 PM GMT are packed and ready within 2 hours. You will receive an SMS and email notification with your dedicated collection QR code.
+            </p>
+</div>
+<div class="pt-4 mt-2">
+<a class="font-label-button text-label-button text-secondary hover:text-primary transition-colors flex items-center gap-1" href="tel:+442089038920">
+<span>Call Collection Counter</span>
+<span class="material-symbols-outlined text-sm">arrow_forward</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Inline Script for Interactive Form Micro-Interaction -->
+<script>
+    function showFormConfirmation() {
+      const toast = document.getElementById('formSuccessToast');
+      if (toast) {
+        toast.classList.remove('hidden');
+        toast.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+      }
+      const form = document.getElementById('sevaInquiryForm');
+      if (form) {
+        form.reset();
+      }
+    }
+  </script>
+</div></main><section class="w-full bg-surface-container border-y border-surface-container-highest py-6"><div class="max-w-[1320px] mx-auto px-gutter"><div class="grid grid-cols-2 md:grid-cols-5 gap-4 items-center"><div class="flex items-center gap-3 p-2"><div class="w-10 h-10 rounded-full bg-primary-container/10 flex items-center justify-center shrink-0"><span class="material-symbols-outlined text-primary text-xl">verified</span></div><div><p class="font-label-nav text-label-nav text-on-surface">100% Authentic</p><p class="font-body-sm text-[12px] text-on-surface-variant">Sourced from sacred sanctums</p></div></div><div class="flex items-center gap-3 p-2"><div class="w-10 h-10 rounded-full bg-primary-container/10 flex items-center justify-center shrink-0"><span class="material-symbols-outlined text-primary text-xl">local_shipping</span></div><div><p class="font-label-nav text-label-nav text-on-surface">Express UK Delivery</p><p class="font-body-sm text-[12px] text-on-surface-variant">Free dispatch on £50+</p></div></div><div class="flex items-center gap-3 p-2"><div class="w-10 h-10 rounded-full bg-primary-container/10 flex items-center justify-center shrink-0"><span class="material-symbols-outlined text-primary text-xl">inventory_2</span></div><div><p class="font-label-nav text-label-nav text-on-surface">Careful Packaging</p><p class="font-body-sm text-[12px] text-on-surface-variant">Transit-safe sacred handling</p></div></div><div class="flex items-center gap-3 p-2"><div class="w-10 h-10 rounded-full bg-primary-container/10 flex items-center justify-center shrink-0"><span class="material-symbols-outlined text-primary text-xl">lock</span></div><div><p class="font-label-nav text-label-nav text-on-surface">Secure Payments</p><p class="font-body-sm text-[12px] text-on-surface-variant">256-bit encrypted checkout</p></div></div><div class="flex items-center gap-3 p-2 col-span-2 md:col-span-1"><div class="w-10 h-10 rounded-full bg-primary-container/10 flex items-center justify-center shrink-0"><span class="material-symbols-outlined text-primary text-xl">support_agent</span></div><div><p class="font-label-nav text-label-nav text-on-surface">Dedicated Support</p><p class="font-body-sm text-[12px] text-on-surface-variant">UK &amp; EU assistance desk</p></div></div></div></div></section><footer class="w-full bg-primary text-on-primary"><div class="max-w-[1320px] mx-auto px-gutter pt-space-2xl pb-space-xl"><div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-space-xl"><div class="lg:col-span-2 flex flex-col gap-space-md"><div class="flex flex-col"><div class="flex items-center gap-space-xs"><span class="font-headline-lg text-headline-lg tracking-tight text-on-primary font-bold leading-none">GIRI</span><span class="font-eyebrow-accent text-eyebrow-accent uppercase bg-secondary text-on-secondary px-1.5 py-0.5 rounded">UK</span></div><span class="font-eyebrow-accent text-eyebrow-accent tracking-widest uppercase text-secondary-fixed mt-1">In UK &amp; EU by SHIVAYAA</span></div><p class="font-body-md text-body-md text-surface-container-highest max-w-sm leading-relaxed">Authentic Indian cultural treasures, sacred Vedic literature, handcrafted brass murtis, and ritual puja essentials curated reverently for homes across the UK and Europe.</p><div class="flex items-center gap-space-sm pt-space-xs"><a class="w-9 h-9 rounded-full bg-primary-container flex items-center justify-center text-secondary-fixed hover:bg-secondary hover:text-on-secondary transition-colors" href="#"><span class="material-symbols-outlined text-base">photo_camera</span></a><a class="w-9 h-9 rounded-full bg-primary-container flex items-center justify-center text-secondary-fixed hover:bg-secondary hover:text-on-secondary transition-colors" href="#"><span class="material-symbols-outlined text-base">share</span></a><a class="w-9 h-9 rounded-full bg-primary-container flex items-center justify-center text-secondary-fixed hover:bg-secondary hover:text-on-secondary transition-colors" href="#"><span class="material-symbols-outlined text-base">smart_display</span></a><a class="w-9 h-9 rounded-full bg-primary-container flex items-center justify-center text-secondary-fixed hover:bg-secondary hover:text-on-secondary transition-colors" href="#"><span class="material-symbols-outlined text-base">push_pin</span></a></div></div><div class="flex flex-col gap-space-sm"><span class="font-eyebrow-accent text-eyebrow-accent text-secondary-fixed uppercase tracking-wider mb-2">Shop Categories</span><a class="font-body-sm text-body-sm text-surface-container-highest hover:text-secondary-fixed transition-colors" data-path="festival-special" href="#">Festival Specials</a><a class="font-body-sm text-body-sm text-surface-container-highest hover:text-secondary-fixed transition-colors" data-path="puja" href="#">Puja Samagri</a><a class="font-body-sm text-body-sm text-surface-container-highest hover:text-secondary-fixed transition-colors" data-path="books" href="#">Sacred Books &amp; Stotras</a><a class="font-body-sm text-body-sm text-surface-container-highest hover:text-secondary-fixed transition-colors" data-path="idols-handicrafts" href="#">Brass Idols &amp; Diyas</a><a class="font-body-sm text-body-sm text-surface-container-highest hover:text-secondary-fixed transition-colors" data-path="dancewear-jewellery" href="#">Classical Dance Jewellery</a><a class="font-body-sm text-body-sm text-surface-container-highest hover:text-secondary-fixed transition-colors" data-path="textiles" href="#">Pure Silk &amp; Dhotis</a></div><div class="flex flex-col gap-space-sm"><span class="font-eyebrow-accent text-eyebrow-accent text-secondary-fixed uppercase tracking-wider mb-2">My Account &amp; Orders</span><a class="font-body-sm text-body-sm text-surface-container-highest hover:text-secondary-fixed transition-colors" data-path="giri-uk-customer-account-dashboard" href="#">Account Overview</a><a class="font-body-sm text-body-sm text-surface-container-highest hover:text-secondary-fixed transition-colors" data-path="giri-uk-customer-order-history" href="#">Past Orders &amp; Invoices</a><a class="font-body-sm text-body-sm text-surface-container-highest hover:text-secondary-fixed transition-colors" data-path="giri-uk-order-confirmation-thank-you" href="#">Track Consignment</a><a class="font-body-sm text-body-sm text-surface-container-highest hover:text-secondary-fixed transition-colors" data-path="shipping-policy" href="#">UK &amp; EU Shipping Rates</a><a class="font-body-sm text-body-sm text-surface-container-highest hover:text-secondary-fixed transition-colors" data-path="returns" href="#">Returns &amp; Exchanges</a><a class="font-body-sm text-body-sm text-surface-container-highest hover:text-secondary-fixed transition-colors" data-path="faqs" href="#">Help &amp; FAQs</a></div><div class="flex flex-col gap-space-md"><span class="font-eyebrow-accent text-eyebrow-accent text-secondary-fixed uppercase tracking-wider">Stay in Touch</span><p class="font-body-sm text-body-sm text-surface-container-highest">Subscribe for spiritual insights, festival muhurthams, and exclusive boutique previews.</p><form class="flex flex-col gap-space-xs"><div class="flex items-center rounded-full bg-primary-container p-1 shadow-[0_2px_8px_rgba(0,0,0,0.12)]"><input class="w-full px-4 py-2 bg-transparent text-on-primary placeholder:text-surface-variant font-body-sm text-body-sm focus:outline-none" placeholder="Your email address" type="email"/><button class="px-4 py-2 rounded-full bg-secondary text-on-secondary font-label-button text-label-button hover:bg-secondary-fixed hover:text-on-secondary-fixed transition-colors shrink-0 flex items-center justify-center" type="button"><span class="material-symbols-outlined text-sm">arrow_forward</span></button></div></form><div class="flex items-center gap-space-xs text-secondary-fixed font-body-sm text-body-sm"><span class="material-symbols-outlined text-sm">verified</span><span>Authentic Heritage Guarantee</span></div></div></div><div class="mt-space-2xl pt-space-lg flex flex-col md:flex-row items-center justify-between gap-space-md bg-primary-container/40 p-space-md rounded-xl"><div class="flex flex-col md:flex-row items-center gap-space-xs text-surface-container-highest font-body-sm text-body-sm text-center md:text-left"><span>In UK &amp; EU by SHIVAYAA</span><span class="hidden md:inline">|</span><span>© 2026 GIRI UK. All rights reserved.</span></div><div class="flex items-center gap-space-xs flex-wrap justify-center"><span class="px-2 py-1 bg-surface-container-lowest text-primary rounded font-label-button text-[10px] font-bold">VISA</span><span class="px-2 py-1 bg-surface-container-lowest text-primary rounded font-label-button text-[10px] font-bold">MASTERCARD</span><span class="px-2 py-1 bg-surface-container-lowest text-primary rounded font-label-button text-[10px] font-bold">MAESTRO</span><span class="px-2 py-1 bg-surface-container-lowest text-primary rounded font-label-button text-[10px] font-bold">AMEX</span><span class="px-2 py-1 bg-surface-container-lowest text-primary rounded font-label-button text-[10px] font-bold">APPLE PAY</span><span class="px-2 py-1 bg-surface-container-lowest text-primary rounded font-label-button text-[10px] font-bold">GOOGLE PAY</span></div></div></div></footer></body></html>

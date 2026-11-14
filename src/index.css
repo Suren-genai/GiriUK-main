@@ -1,0 +1,35 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --font-serif: 'EB Garamond', Georgia, serif;
+    --font-sans: 'Manrope', system-ui, sans-serif;
+  }
+  
+  body {
+    font-family: var(--font-sans);
+    background-color: #FCF9F2;
+    color: #1A2421;
+    overflow-x: hidden;
+  }
+
+  h1, h2, h3, .font-serif-heading {
+    font-family: var(--font-serif);
+  }
+}
+
+/* Custom scrollbars and refined transitions */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #F0EEE7;
+}
+::-webkit-scrollbar-thumb {
+  background: #B99A5B;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #164E45;
+}
