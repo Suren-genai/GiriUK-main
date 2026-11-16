@@ -8,13 +8,15 @@ interface FooterProps {
   onOpenTrackOrder: () => void;
   onSelectCategory: (categoryName: string) => void;
   onNavigatePage?: (page: string) => void;
+  onOpenAdmin?: () => void;
 }
 
 export const Footer: React.FC<FooterProps> = ({
   onOpenStaticPage,
   onOpenTrackOrder,
   onSelectCategory,
-  onNavigatePage
+  onNavigatePage,
+  onOpenAdmin
 }) => {
   const [newsletterEmail, setNewsletterEmail] = useState('');
   const [newsletterSubscribed, setNewsletterSubscribed] = useState(false);
@@ -187,6 +189,15 @@ export const Footer: React.FC<FooterProps> = ({
               <li>
                 <button onClick={() => onOpenStaticPage('delivery')} className="hover:text-white transition-colors cursor-pointer">
                   UK VAT &amp; Customs Compliance
+                </button>
+              </li>
+              <li className="pt-1">
+                <button 
+                  onClick={() => onOpenAdmin ? onOpenAdmin() : onNavigatePage && onNavigatePage('admin')} 
+                  className="hover:text-[#cca730] transition-colors cursor-pointer text-stone-400 flex items-center gap-1.5 font-medium"
+                >
+                  <ShieldCheck className="w-3.5 h-3.5 text-[#cca730]" />
+                  <span>Admin Portal</span>
                 </button>
               </li>
             </ul>

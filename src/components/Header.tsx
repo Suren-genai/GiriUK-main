@@ -17,7 +17,7 @@ import {
 import { CATEGORIES_TAXONOMY } from '../data/mockData';
 import { Product } from '../types';
 
-export type NavPage = 'home' | 'idols' | 'puja' | 'search' | 'on-demand' | 'contact' | 'about' | 'faq' | 'delivery' | 'category' | 'product';
+export type NavPage = 'home' | 'idols' | 'puja' | 'search' | 'on-demand' | 'contact' | 'about' | 'faq' | 'delivery' | 'category' | 'product' | 'admin';
 
 interface HeaderProps {
   currentPage: NavPage;

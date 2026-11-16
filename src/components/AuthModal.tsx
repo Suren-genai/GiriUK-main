@@ -54,8 +54,16 @@ export const AuthModal: React.FC<AuthModalProps> = ({
     e.preventDefault();
     setLoading(true);
     setError(null);
+
+    const timeout = new Promise<never>((_, reject) =>
+      setTimeout(() => reject(new Error('Request timed out. Please try again.')), 10000)
+    );
+
     try {
-      const { data, error: authError } = await supabase.auth.signInWithPassword({ email, password });
+      const { data, error: authError } = await Promise.race([
+        supabase.auth.signInWithPassword({ email, password }),
+        timeout,
+      ]);
       if (authError) throw authError;
       const name =
         data.user?.user_metadata?.full_name ||
@@ -82,19 +90,37 @@ export const AuthModal: React.FC<AuthModalProps> = ({
     }
     setLoading(true);
     setError(null);
+
+    // Wrap with a 10-second timeout so it never hangs forever
+    const timeout = new Promise<never>((_, reject) =>
+      setTimeout(() => reject(new Error('Request timed out. Please check your internet connection and try again.')), 10000)
+    );
+
     try {
-      const { error: authError } = await supabase.auth.signUp({
-        email,
-        password,
-        options: {
-          data: { full_name: fullName },
-          emailRedirectTo: `${window.location.origin}/`,
-        },
-      });
+      const { data, error: authError } = await Promise.race([
+        supabase.auth.signUp({
+          email,
+          password,
+          options: {
+            data: { full_name: fullName },
+            emailRedirectTo: `${window.location.origin}/`,
+          },
+        }),
+        timeout,
+      ]);
       if (authError) throw authError;
-      setSuccessMsg(
-        `✅ Account created! We've sent a confirmation link to ${email}. Please verify your email to sign in.`
-      );
+
+      // If email confirmation is disabled, user is immediately confirmed
+      if (data?.session) {
+        const name = data.user?.user_metadata?.full_name || fullName || email.split('@')[0];
+        onAuthSuccess({ name, email: data.user!.email! });
+        onClose();
+      } else {
+        // Email confirmation required — show message
+        setSuccessMsg(
+          `✅ Account created! Check your inbox at ${email} for a confirmation link, then sign in.`
+        );
+      }
     } catch (err: unknown) {
       setError((err as { message?: string }).message || 'Registration failed. Please try again.');
     } finally {

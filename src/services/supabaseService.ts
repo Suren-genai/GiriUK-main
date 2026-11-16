@@ -163,6 +163,18 @@ export async function upsertProductInSupabase(product: Product): Promise<Product
   return mapRowToProduct(data);
 }
 
+export async function deleteProductInSupabase(productId: string): Promise<void> {
+  const { error } = await supabase
+    .from('products')
+    .delete()
+    .eq('id', productId);
+
+  if (error) {
+    console.error('Error deleting product from Supabase:', error);
+    throw error;
+  }
+}
+
 export async function fetchOrdersFromSupabase(): Promise<Order[]> {
   const { data, error } = await supabase
     .from('orders')

@@ -34,14 +34,18 @@ import { BlogModal } from './components/BlogModal';
 import { StaticPagesModal, StaticPageType } from './components/StaticPagesModal';
 import { AdminPanelModal } from './components/AdminPanelModal';
 import { Footer } from './components/Footer';
+import { AdminLoginPage } from './pages/admin/AdminLoginPage';
+import { AdminDashboard } from './pages/admin/AdminDashboard';
 import { 
   fetchProductsFromSupabase, 
   upsertProductInSupabase, 
+  deleteProductInSupabase,
   fetchOrdersFromSupabase, 
   insertOrderInSupabase, 
   updateOrderStatusInSupabase, 
   fetchOnDemandRequestsFromSupabase, 
-  insertOnDemandRequestInSupabase 
+  insertOnDemandRequestInSupabase,
+  updateOnDemandRequestStatusInSupabase
 } from './services/supabaseService';
 import { IdolsHandicraftsPage } from './pages/IdolsHandicraftsPage';
 import { PujaEssentialsPage } from './pages/PujaEssentialsPage';
@@ -148,6 +152,14 @@ export default function App() {
   const [selectedBlogPost, setSelectedBlogPost] = useState<BlogPost | null>(null);
   const [staticPageType, setStaticPageType] = useState<StaticPageType | null>(null);
   const [isAdminOpen, setIsAdminOpen] = useState(false);
+  const [adminUser, setAdminUser] = useState<{ name: string; email: string; role: string } | null>(() => {
+    try {
+      const saved = sessionStorage.getItem('giriuk_admin_user');
+      return saved ? JSON.parse(saved) : null;
+    } catch {
+      return null;
+    }
+  });
 
   // Toast Notification State
   const [toastMessage, setToastMessage] = useState<string | null>(null);
@@ -284,6 +296,10 @@ export default function App() {
   useEffect(() => {
     const handleLocationChange = () => {
       const pathname = window.location.pathname;
+      if (pathname.startsWith('/admin')) {
+        setCurrentPage('admin');
+        return;
+      }
       if (pathname.startsWith('/product/')) {
         const parts = pathname.replace('/product/', '').split('-');
         const idCandidate = parts[parts.length - 1];
@@ -384,43 +400,125 @@ export default function App() {
         </div>
       )}
 
-      {/* Main Header */}
-      <Header
-        currentPage={currentPage}
-        onNavigatePage={(page, query) => {
-          setCurrentPage(page);
-          if (query) setSearchQueryParam(query);
-          if (page === 'home') {
-            setSelectedCategory('All');
-            setSelectedSubcategory(null);
-            window.history.pushState(null, '', '/');
-          }
-          window.scrollTo({ top: 0, behavior: 'smooth' });
-        }}
-        cartCount={cartCount}
-        cartTotal={cartTotal}
-        wishlistCount={wishlist.length}
-        currentUser={currentUser}
-        onOpenCart={() => setIsCartOpen(true)}
-        onOpenWishlist={() => setIsAccountOpen(true)}
-        onOpenAccount={() => setIsAccountOpen(true)}
-        onOpenSignIn={() => { setAuthMode('signin'); setIsAuthOpen(true); }}
-        onOpenSignUp={() => { setAuthMode('signup'); setIsAuthOpen(true); }}
-        onSignOut={async () => {
-          await supabase.auth.signOut();
-          setCurrentUser(null);
-          showToast('Signed out successfully');
-        }}
-        onOpenTrackOrder={() => setIsTrackingOpen(true)}
-        onOpenOnDemand={() => setIsOnDemandOpen(true)}
-        onOpenAdmin={() => setIsAdminOpen(true)}
-        onSelectCategory={handleSelectCategory}
-        onSelectProduct={handleOpenProduct}
-        allProducts={products}
-        currentCategory={selectedCategory}
-        currentSubcategory={selectedSubcategory}
-        isSupabaseConnected={isSupabaseConnected}
-      />
+      {currentPage === 'admin' ? (
+        !adminUser ? (
+          <AdminLoginPage
+            onAdminLogin={(u) => {
+              setAdminUser(u);
+              sessionStorage.setItem('giriuk_admin_user', JSON.stringify(u));
+              showToast(`Welcome to Admin Portal, ${u.name}`);
+            }}
+            onBackToStore={() => {
+              setCurrentPage('home');
+              window.history.pushState(null, '', '/');
+              window.scrollTo({ top: 0, behavior: 'smooth' });
+            }}
+          />
+        ) : (
+          <AdminDashboard
+            adminUser={adminUser}
+            products={products}
+            orders={orders}
+            onDemandRequests={onDemandRequests}
+            coupons={AVAILABLE_COUPONS}
+            onLogout={() => {
+              setAdminUser(null);
+              sessionStorage.removeItem('giriuk_admin_user');
+              showToast('Admin logged out');
+            }}
+            onUpdateProduct={(up) => {
+              setProducts((prev) => prev.map((p) => (p.id === up.id ? up : p)));
+              showToast(`Updated product "${up.name.slice(0, 20)}..."`);
+              upsertProductInSupabase(up).catch((err) =>
+                console.error('Failed to sync updated product to Supabase:', err)
+              );
+            }}
+            onAddProduct={(newProd) => {
+              setProducts((prev) => [newProd, ...prev]);
+              showToast(`Added product "${newProd.name.slice(0, 20)}..."`);
+              upsertProductInSupabase(newProd).catch((err) =>
+                console.error('Failed to add product to Supabase:', err)
+              );
+            }}
+            onDeleteProduct={(id) => {
+              setProducts((prev) => prev.filter((p) => p.id !== id));
+              showToast('Product deleted from inventory');
+              deleteProductInSupabase(id).catch((err) =>
+                console.error('Failed to delete product in Supabase:', err)
+              );
+            }}
+            onUpdateOrderStatus={(ordId, st) => {
+              setOrders((prev) =>
+                prev.map((o) => (o.id === ordId ? { ...o, status: st } : o))
+              );
+              showToast(`Order status updated to ${st}`);
+              updateOrderStatusInSupabase(ordId, st).catch((err) =>
+                console.error('Failed to sync order status to Supabase:', err)
+              );
+            }}
+            onUpdateOnDemandStatus={(reqId, st) => {
+              setOnDemandRequests((prev) =>
+                prev.map((r) => (r.id === reqId ? { ...r, status: st as any } : r))
+              );
+              showToast(`Sourcing ticket status updated to ${st}`);
+              updateOnDemandRequestStatusInSupabase(reqId, st as any).catch((err) =>
+                console.error('Failed to sync request status to Supabase:', err)
+              );
+            }}
+            onAddCoupon={(c) => {
+              AVAILABLE_COUPONS.push(c);
+              showToast(`Coupon ${c.code} created`);
+            }}
+            onNavigateToStore={() => {
+              setCurrentPage('home');
+              window.history.pushState(null, '', '/');
+              window.scrollTo({ top: 0, behavior: 'smooth' });
+            }}
+          />
+        )
+      ) : (
+        <>
+          {/* Main Header */}
+          <Header
+            currentPage={currentPage}
+            onNavigatePage={(page, query) => {
+              setCurrentPage(page);
+              if (query) setSearchQueryParam(query);
+              if (page === 'home') {
+                setSelectedCategory('All');
+                setSelectedSubcategory(null);
+                window.history.pushState(null, '', '/');
+              }
+              window.scrollTo({ top: 0, behavior: 'smooth' });
+            }}
+            cartCount={cartCount}
+            cartTotal={cartTotal}
+            wishlistCount={wishlist.length}
+            currentUser={currentUser}
+            onOpenCart={() => setIsCartOpen(true)}
+            onOpenWishlist={() => setIsAccountOpen(true)}
+            onOpenAccount={() => setIsAccountOpen(true)}
+            onOpenSignIn={() => { setAuthMode('signin'); setIsAuthOpen(true); }}
+            onOpenSignUp={() => { setAuthMode('signup'); setIsAuthOpen(true); }}
+            onSignOut={async () => {
+              await supabase.auth.signOut();
+              setCurrentUser(null);
+              showToast('Signed out successfully');
+            }}
+            onOpenTrackOrder={() => setIsTrackingOpen(true)}
+            onOpenOnDemand={() => setIsOnDemandOpen(true)}
+            onOpenAdmin={() => {
+              setCurrentPage('admin');
+              window.history.pushState(null, '', '/admin');
+              window.scrollTo({ top: 0, behavior: 'smooth' });
+            }}
+            onSelectCategory={handleSelectCategory}
+            onSelectProduct={handleOpenProduct}
+            allProducts={products}
+            currentCategory={selectedCategory}
+            currentSubcategory={selectedSubcategory}
+            isSupabaseConnected={isSupabaseConnected}
+          />
 
       {/* Conditional Rendering Based on Current Page */}
       {currentPage === 'product' && selectedProduct && (
@@ -837,7 +935,14 @@ export default function App() {
           setCurrentPage(page as NavPage);
           window.scrollTo({ top: 0, behavior: 'smooth' });
         }}
+        onOpenAdmin={() => {
+          setCurrentPage('admin');
+          window.history.pushState(null, '', '/admin');
+          window.scrollTo({ top: 0, behavior: 'smooth' });
+        }}
       />
+    </>
+  )}
 
       {/* Cart Drawer */}
       <CartDrawer
