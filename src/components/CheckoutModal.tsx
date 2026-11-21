@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { X, Check, ShieldCheck, CreditCard, Lock, Truck, ArrowLeft, ArrowRight, CheckCircle2 } from 'lucide-react';
-import { CartItem, Coupon, Order, CustomerAddress } from '../types';
+import { CartItem, Coupon, Order, CustomerAddress, UserProfile } from '../types';
 
 interface CheckoutModalProps {
   isOpen: boolean;
@@ -10,6 +10,7 @@ interface CheckoutModalProps {
   onOrderPlaced: (order: Order) => void;
   onClearCart: () => void;
   onTrackOrder: (orderNumber: string) => void;
+  currentUser?: UserProfile | null;
 }
 
 export const CheckoutModal: React.FC<CheckoutModalProps> = ({
@@ -19,23 +20,36 @@ export const CheckoutModal: React.FC<CheckoutModalProps> = ({
   appliedCoupon,
   onOrderPlaced,
   onClearCart,
-  onTrackOrder
+  onTrackOrder,
+  currentUser
 }) => {
   if (!isOpen) return null;
 
   const [step, setStep] = useState<1 | 2 | 3>(1);
   const [confirmedOrder, setConfirmedOrder] = useState<Order | null>(null);
 
-  // Address State
-  const [address, setAddress] = useState<CustomerAddress>({
-    fullName: 'Suren Murugesan',
-    email: 'suren.genaiarchitect@gmail.com',
-    phone: '+44 7700 900123',
-    addressLine1: '18 Station Road, Harrow',
+  // Address State - default or populate from authenticated Supabase user
+  const [address, setAddress] = useState<CustomerAddress>(() => ({
+    fullName: currentUser?.name || '',
+    email: currentUser?.email || '',
+    phone: currentUser?.phone || '',
+    addressLine1: currentUser?.address || '',
     city: 'London',
     postcode: 'HA1 2TU',
     country: 'United Kingdom'
-  });
+  }));
+
+  useEffect(() => {
+    if (currentUser) {
+      setAddress((prev) => ({
+        ...prev,
+        fullName: currentUser.name || prev.fullName,
+        email: currentUser.email || prev.email,
+        phone: currentUser.phone || prev.phone,
+        addressLine1: currentUser.address || prev.addressLine1
+      }));
+    }
+  }, [currentUser]);
 
   // Shipping Method
   const [shippingMethod, setShippingMethod] = useState<'Royal Mail 48 Tracked' | 'DPD Next Day Express' | 'EU International Tracked'>('Royal Mail 48 Tracked');

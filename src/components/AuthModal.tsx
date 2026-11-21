@@ -90,14 +90,15 @@ export const AuthModal: React.FC<AuthModalProps> = ({
     }
     setLoading(true);
     setError(null);
+    setSuccessMsg(null);
 
-    // Wrap with a 10-second timeout so it never hangs forever
+    // Wrap with a 15-second timeout so it never hangs forever
     const timeout = new Promise<never>((_, reject) =>
-      setTimeout(() => reject(new Error('Request timed out. Please check your internet connection and try again.')), 10000)
+      setTimeout(() => reject(new Error('Request timed out. Please check your internet connection and try again.')), 15000)
     );
 
     try {
-      const { data, error: authError } = await Promise.race([
+      const result = await Promise.race([
         supabase.auth.signUp({
           email,
           password,
@@ -108,21 +109,34 @@ export const AuthModal: React.FC<AuthModalProps> = ({
         }),
         timeout,
       ]);
+
+      const { data, error: authError } = result;
       if (authError) throw authError;
 
-      // If email confirmation is disabled, user is immediately confirmed
+      // Check if user already exists (Supabase returns user with empty identities array)
+      if (data?.user && data.user.identities && data.user.identities.length === 0) {
+        setError('An account with this email already exists. Please sign in instead.');
+        setLoading(false);
+        return;
+      }
+
+      // If email confirmation is disabled, user is immediately confirmed and gets a session
       if (data?.session) {
         const name = data.user?.user_metadata?.full_name || fullName || email.split('@')[0];
         onAuthSuccess({ name, email: data.user!.email! });
         onClose();
-      } else {
-        // Email confirmation required — show message
+      } else if (data?.user) {
+        // Email confirmation required — show success message
         setSuccessMsg(
           `✅ Account created! Check your inbox at ${email} for a confirmation link, then sign in.`
         );
+      } else {
+        // Unexpected response — no user and no error
+        setError('Something went wrong. Please try again.');
       }
     } catch (err: unknown) {
-      setError((err as { message?: string }).message || 'Registration failed. Please try again.');
+      const message = (err as { message?: string }).message || 'Registration failed. Please try again.';
+      setError(message);
     } finally {
       setLoading(false);
     }
@@ -151,10 +165,16 @@ export const AuthModal: React.FC<AuthModalProps> = ({
     try {
       const { error: authError } = await supabase.auth.signInWithOAuth({
         provider: 'google',
-        options: { redirectTo: `${window.location.origin}/` },
+        options: {
+          redirectTo: `${window.location.origin}/`,
+          queryParams: {
+            access_type: 'offline',
+            prompt: 'select_account',
+          },
+        },
       });
       if (authError) throw authError;
-      // Google auth redirects the page; onAuthSuccess fires via onAuthStateChange in App
+      // Google auth redirects the browser; onAuthSuccess fires via onAuthStateChange in App
     } catch (err: unknown) {
       setError((err as { message?: string }).message || 'Google sign in failed.');
       setLoading(false);
@@ -233,7 +253,7 @@ export const AuthModal: React.FC<AuthModalProps> = ({
                 <path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" fill="#FBBC05"/>
                 <path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/>
               </svg>
-              Continue with Google
+              {mode === 'signup' ? 'Sign up with Google' : 'Sign in with Google'}
             </button>
           )}
 

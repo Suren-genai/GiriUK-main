@@ -19,7 +19,7 @@ import {
   INITIAL_ORDERS,
   CATEGORIES_TAXONOMY 
 } from './data/mockData';
-import { Product, CartItem, Coupon, Order, OnDemandRequest, BlogPost, OrderStatus } from './types';
+import { Product, CartItem, Coupon, Order, OnDemandRequest, BlogPost, OrderStatus, UserProfile } from './types';
 import { Header, NavPage } from './components/Header';
 import { HeroSlider } from './components/HeroSlider';
 import { ProductCard } from './components/ProductCard';
@@ -97,43 +97,88 @@ export default function App() {
     return AVAILABLE_COUPONS[0]; // GIRIUK2026 default applied for ease
   });
 
-  const [currentUser, setCurrentUser] = useState<{ name: string; email: string } | null>(null);
+  const [currentUser, setCurrentUser] = useState<UserProfile | null>(null);
 
   // Auth modal state
   const [isAuthOpen, setIsAuthOpen] = useState(false);
   const [authMode, setAuthMode] = useState<'signin' | 'signup'>('signin');
+
+  // Helper to compute loyalty tier dynamically from Supabase orders
+  const computeLoyaltyTier = (email: string, userOrders: Order[], explicitTier?: string): string => {
+    if (explicitTier) return explicitTier;
+    const count = userOrders.filter(
+      (o) => o.shippingAddress?.email?.toLowerCase() === email?.toLowerCase()
+    ).length;
+    if (count >= 3) return 'Temple Patron (10% Rewards)';
+    if (count >= 1) return 'Devotee Member (5% Rewards)';
+    return 'Welcome Seeker (5% First Order)';
+  };
+
+  // Helper to parse user profile from Supabase user session
+  const parseUserProfile = (user: any, userOrders: Order[] = []): UserProfile => {
+    const meta = user.user_metadata || {};
+    const name =
+      meta.full_name ||
+      meta.name ||
+      user.email?.split('@')[0] ||
+      'Customer';
+    const address = meta.address || '';
+    const phone = meta.phone || '';
+    const loyaltyTier = meta.loyalty_tier || computeLoyaltyTier(user.email || '', userOrders, meta.loyalty_tier);
+
+    return {
+      id: user.id,
+      name,
+      email: user.email || '',
+      address,
+      phone,
+      loyaltyTier,
+    };
+  };
 
   // Listen for Supabase auth state changes
   useEffect(() => {
     // Get initial session
     supabase.auth.getSession().then(({ data: { session } }) => {
       if (session?.user) {
-        const name =
-          session.user.user_metadata?.full_name ||
-          session.user.user_metadata?.name ||
-          session.user.email?.split('@')[0] ||
-          'Customer';
-        setCurrentUser({ name, email: session.user.email! });
+        setCurrentUser(parseUserProfile(session.user, orders));
       }
     });
 
     // Subscribe to future auth changes
     const { data: { subscription } } = supabase.auth.onAuthStateChange((_event, session) => {
       if (session?.user) {
-        const name =
-          session.user.user_metadata?.full_name ||
-          session.user.user_metadata?.name ||
-          session.user.email?.split('@')[0] ||
-          'Customer';
-        setCurrentUser({ name, email: session.user.email! });
+        setCurrentUser(parseUserProfile(session.user, orders));
         setIsAuthOpen(false);
+
+        // Clean up OAuth tokens/codes from URL address bar
+        if (window.location.hash.includes('access_token=') || window.location.search.includes('code=')) {
+          window.history.replaceState({}, document.title, window.location.pathname);
+        }
       } else {
         setCurrentUser(null);
       }
     });
 
     return () => subscription.unsubscribe();
-  }, []);
+  }, [orders]);
+
+  // Update profile / address in Supabase user_metadata
+  const handleUpdateProfile = async (updates: { address?: string; phone?: string; name?: string; loyaltyTier?: string }) => {
+    const { data, error } = await supabase.auth.updateUser({
+      data: {
+        address: updates.address !== undefined ? updates.address : currentUser?.address,
+        phone: updates.phone !== undefined ? updates.phone : currentUser?.phone,
+        full_name: updates.name !== undefined ? updates.name : currentUser?.name,
+        loyalty_tier: updates.loyaltyTier !== undefined ? updates.loyaltyTier : currentUser?.loyaltyTier,
+      },
+    });
+    if (error) throw error;
+    if (data?.user) {
+      setCurrentUser((prev) => (prev ? { ...prev, ...updates } : null));
+      showToast('Delivery address saved to your Supabase account');
+    }
+  };
 
   // Navigation & Filtering State
   const [selectedCategory, setSelectedCategory] = useState<string>('All');
@@ -964,6 +1009,7 @@ export default function App() {
         onClose={() => setIsCheckoutOpen(false)}
         items={cartItems}
         appliedCoupon={appliedCoupon}
+        currentUser={currentUser}
         onOrderPlaced={(newOrder) => {
           setOrders((prev) => [newOrder, ...prev]);
           showToast(`Order ${newOrder.orderNumber} successfully placed!`);
@@ -991,9 +1037,14 @@ export default function App() {
         isOpen={isAccountOpen}
         onClose={() => setIsAccountOpen(false)}
         currentUser={currentUser}
-        onLogin={(name, email) => {
-          setCurrentUser({ name, email });
-          showToast(`Signed in as ${name}`);
+        onUpdateProfile={handleUpdateProfile}
+        onRequestSignIn={() => {
+          setAuthMode('signin');
+          setIsAuthOpen(true);
+        }}
+        onRequestSignUp={() => {
+          setAuthMode('signup');
+          setIsAuthOpen(true);
         }}
         onLogout={async () => {
           await supabase.auth.signOut();

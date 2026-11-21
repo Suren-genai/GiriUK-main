@@ -46,6 +46,15 @@ export interface CustomerAddress {
   country: string;
 }
 
+export interface UserProfile {
+  id?: string;
+  name: string;
+  email: string;
+  address?: string;
+  phone?: string;
+  loyaltyTier?: string;
+}
+
 export type OrderStatus = 'Processing' | 'Dispatched' | 'In Transit' | 'Delivered' | 'Cancelled';
 
 export interface Order {
